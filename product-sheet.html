@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Sheet | CenterPoint Grocery</title>
+  <meta name="description" content="CenterPoint Grocery product sheet view." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div>
+      <h1>Product Sheet</h1>
+      <p class="muted">Table view for quick scanning. Searchable.</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="products.csv" download>Download CSV</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="controls card">
+      <input id="q" type="search" placeholder="Search SKU / product / department…" />
+      <select id="cat"><option value="">All departments</option></select>
+      <label class="checkbox"><input id="instock" type="checkbox" /> In stock only</label>
+      <span class="muted small" id="count"></span>
+    </section>
+
+    <section class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Product</th>
+            <th>Dept</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>In stock</th>
+            <th class="small">Qty</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted">
+    © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    async function loadCSV(url){
+      const res = await fetch(url, {cache: "no-store"});
+      const text = await res.text();
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(",").map(h => h.trim());
+      const rows = lines.slice(1).map(line => {
+        const cols = line.split(",").map(c => c.trim());
+        const obj = {};
+        headers.forEach((h,i)=>obj[h]=cols[i] ?? "");
+        return obj;
+      });
+      return rows;
+    }
+
+    function money(v){
+      if(!v) return "";
+      const n = Number(v);
+      if(Number.isNaN(n)) return v;
+      return "$" + n.toFixed(2);
+    }
+
+    function unique(arr){ return [...new Set(arr)].sort((a,b)=>a.localeCompare(b)); }
+
+    (async () => {
+      const all = await loadCSV("products.csv");
+      const cats = unique(all.map(r => r.category).filter(Boolean));
+      const catSel = document.getElementById("cat");
+      cats.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value=c; opt.textContent=c;
+        catSel.appendChild(opt);
+      });
+
+      const q = document.getElementById("q");
+      const instock = document.getElementById("instock");
+      const tbody = document.getElementById("tbody");
+      const count = document.getElementById("count");
+
+      function render(rows){
+        count.textContent = `${rows.length.toLocaleString()} rows`;
+        tbody.innerHTML = rows.map(r => `
+          <tr>
+            <td>${r.sku || ""}</td>
+            <td>${r.name || ""}</td>
+            <td>${r.category || ""}</td>
+            <td>${r.size || ""}</td>
+            <td>${money(r.price)}</td>
+            <td>${r.in_stock || ""}</td>
+            <td class="small">${r.qty || ""}</td>
+          </tr>
+        `).join("");
+      }
+
+      function apply(){
+        const term = (q.value || "").toLowerCase().trim();
+        const cat = catSel.value;
+        const onlyStock = instock.checked;
+
+        let rows = all;
+        if(cat) rows = rows.filter(r => r.category === cat);
+        if(onlyStock) rows = rows.filter(r => (r.in_stock || "").toLowerCase() === "yes");
+
+        if(term){
+          rows = rows.filter(r => {
+            const blob = `${r.sku} ${r.name} ${r.size} ${r.category}`.toLowerCase();
+            return blob.includes(term);
+          });
+        }
+        render(rows);
+      }
+
+      q.addEventListener("input", apply);
+      catSel.addEventListener("change", apply);
+      instock.addEventListener("change", apply);
+
+      apply();
+    })();
+  </script>
+</body>
+</html>

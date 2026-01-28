@@ -1,0 +1,43 @@
+:root{
+  --bg:#0b0f14;
+  --card:#121826;
+  --muted:#9aa4b2;
+  --text:#e5e7eb;
+  --accent:#22c55e;
+  --border:#233045;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.4}
+a{color:var(--text);text-decoration:none}
+a:hover{opacity:.9}
+.wrap{max-width:1100px;margin:0 auto;padding:20px}
+.header{display:flex;gap:16px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--border)}
+.nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.nav a{padding:8px 10px;border:1px solid var(--border);border-radius:12px;background:transparent}
+h1{margin:0 0 6px 0;font-size:28px}
+h2{margin:0 0 10px 0;font-size:18px}
+.muted{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px;margin:16px 0;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.product{display:flex;flex-direction:column;gap:8px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.dot{width:10px;height:10px;border-radius:999px;background:var(--accent);display:inline-block}
+.dot.off{background:#ef4444}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+input[type="search"], select{
+  background:#0f1623;color:var(--text);
+  border:1px solid var(--border);
+  border-radius:12px;padding:10px 12px;min-width:220px;
+}
+.checkbox{display:flex;gap:8px;align-items:center;color:var(--muted)}
+.btn{border:1px solid var(--border);border-radius:12px;padding:10px 12px;background:#0f1623}
+.kpi{display:flex;gap:12px;flex-wrap:wrap}
+.kpi .tile{flex:1;min-width:190px;background:#0f1623;border:1px solid var(--border);border-radius:16px;padding:14px}
+.footer{border-top:1px solid var(--border);padding-top:14px;padding-bottom:30px}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 8px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}
+th{color:var(--muted);font-weight:600}
+.small{font-size:12px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}

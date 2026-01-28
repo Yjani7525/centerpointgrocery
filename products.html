@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products | CenterPoint Grocery</title>
+  <meta name="description" content="Browse CenterPoint Grocery products. Search and filter by department." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div>
+      <h1>Products</h1>
+      <p class="muted">Search, filter, and view availability.</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="product-sheet.html">Product Sheet</a>
+      <a href="products.csv" download>Download CSV</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="controls card">
+      <input id="q" type="search" placeholder="Search product, SKU, size, department…" />
+      <select id="cat"><option value="">All departments</option></select>
+      <label class="checkbox"><input id="instock" type="checkbox" /> In stock only</label>
+      <span class="muted small" id="count"></span>
+    </section>
+
+    <section id="grid" class="grid"></section>
+    <p class="muted small" id="note">Prices and availability can change — call the store for confirmation on time-sensitive items.</p>
+  </main>
+
+  <footer class="wrap footer muted">
+    © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    async function loadCSV(url){
+      const res = await fetch(url, {cache: "no-store"});
+      const text = await res.text();
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(",").map(h => h.trim());
+      const rows = lines.slice(1).map(line => {
+        const cols = line.split(",").map(c => c.trim());
+        const obj = {};
+        headers.forEach((h,i)=>obj[h]=cols[i] ?? "");
+        return obj;
+      });
+      return rows;
+    }
+
+    function money(v){
+      if(!v) return "";
+      const n = Number(v);
+      if(Number.isNaN(n)) return v;
+      return "$" + n.toFixed(2);
+    }
+
+    function render(rows){
+      const grid = document.getElementById("grid");
+      const count = document.getElementById("count");
+      count.textContent = `${rows.length.toLocaleString()} items shown`;
+
+      grid.innerHTML = rows.map(r => {
+        const inStock = (r.in_stock || "").toLowerCase() === "yes";
+        const dotClass = inStock ? "dot" : "dot off";
+        const stockText = inStock ? "In stock" : "Out of stock";
+        const price = money(r.price);
+        const size = r.size ? ` • ${r.size}` : "";
+        const cat = r.category ? `<div class="muted small">${r.category}</div>` : "";
+        return `
+          <div class="card product">
+            ${cat}
+            <div style="display:flex;justify-content:space-between;gap:10px">
+              <div style="font-weight:700">${r.name || ""}</div>
+              <div style="font-weight:700">${price}</div>
+            </div>
+            <div class="muted small">${r.sku || ""}${size}</div>
+            <div class="badge"><span class="${dotClass}"></span> ${stockText}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function unique(arr){ return [...new Set(arr)].sort((a,b)=>a.localeCompare(b)); }
+
+    (async () => {
+      const all = await loadCSV("products.csv");
+
+      // populate categories
+      const cats = unique(all.map(r => r.category).filter(Boolean));
+      const catSel = document.getElementById("cat");
+      cats.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c; opt.textContent = c;
+        catSel.appendChild(opt);
+      });
+
+      const q = document.getElementById("q");
+      const instock = document.getElementById("instock");
+
+      function apply(){
+        const term = (q.value || "").toLowerCase().trim();
+        const cat = catSel.value;
+        const onlyStock = instock.checked;
+
+        let rows = all;
+
+        if(cat) rows = rows.filter(r => r.category === cat);
+        if(onlyStock) rows = rows.filter(r => (r.in_stock || "").toLowerCase() === "yes");
+
+        if(term){
+          rows = rows.filter(r => {
+            const blob = `${r.sku} ${r.name} ${r.size} ${r.category}`.toLowerCase();
+            return blob.includes(term);
+          });
+        }
+
+        render(rows);
+      }
+
+      q.addEventListener("input", apply);
+      catSel.addEventListener("change", apply);
+      instock.addEventListener("change", apply);
+
+      apply();
+    })();
+  </script>
+</body>
+</html>

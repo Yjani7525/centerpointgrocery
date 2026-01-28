@@ -1,0 +1,1058 @@
+sku,name,brand,size,price,category,in_stock,image_url,qty
+CPG-0001,Griss Pasta (brand unclear),,184 g,4.99,Grocery,Yes,,2
+CPG-0002,Kirkland Garlic Hummus,,184 g,4.75,Grocery,Yes,,9
+CPG-0003,T&T Tuna Chunks,,220 ml,4.99,Grocery,Yes,,4
+CPG-0004,Patak’s Tikka Paste,,280 ml,6.29,Grocery,Yes,,3
+CPG-0005,Unico Pasta Sauce (Garlic),,680 ml,6.49,Grocery,Yes,,2
+CPG-0006,Catelli Meat Pasta Sauce,,398 ml,3.99,Grocery,Yes,,3
+CPG-0007,Kraft BBQ Sauce (Original),,455 ml,4.99,Grocery,Yes,,1
+CPG-0008,Kraft BBQ Sauce (Chicken),,455 ml,4.99,Grocery,No,,0
+CPG-0009,Kraft BBQ Sauce (Smokey),,455 ml,4.99,Grocery,Yes,,2
+CPG-0010,Dwight Honey Mustard,,250 g,6.29,Grocery,Yes,,4
+CPG-0011,Mario’s Tomato Jam,,340 g,4.09,Grocery,Yes,,4
+CPG-0012,Campbell’s Beef (No Salt),,900 ml,4.75,Grocery,Yes,,1
+CPG-0013,Campbell’s Beef,,900 ml,4.75,Grocery,Yes,,2
+CPG-0014,Campbell’s Vegetable,,900 ml,4.75,Grocery,Yes,,2
+CPG-0015,Spam (Original),,340 g,6.99,Grocery,Yes,,3
+CPG-0016,Spam (Garlic),,340 g,6.99,Grocery,Yes,,3
+CPG-0017,Haldiram Tandoori Naan,,240 g,5.99,Grocery,Yes,,1
+CPG-0018,Bikano Rasmalai,,1 kg,9.99,Grocery,Yes,,1
+CPG-0019,Sardine Chilli,,155 g,3.99,Grocery,Yes,,2
+CPG-0020,Stubb’s Vinegar Dressing,,260 g,5.99,Grocery,Yes,,2
+CPG-0021,Shan Mango Pickle,,1 kg,,Grocery,Yes,,1
+CPG-0022,Sardine Tomato Sauce,,155 g,3.99,Grocery,Yes,,2
+CPG-0023,A+ Sardines,,155 g,3.99,Grocery,Yes,,1
+CPG-0024,Munchies Peanuts Honey Roasted,,55 g,1.86,Snacks,Yes,,6
+CPG-0025,Blue Diamond Almonds Smoke,,23 g,1.90,Snacks,Yes,,12
+CPG-0026,Leclerc Celebration Milk Chocolate,,240 g,5.27,Snacks,Yes,,5
+CPG-0027,Leclerc Celebration Dark Chocolate,,240 g,5.27,Snacks,Yes,,5
+CPG-0028,Leclerc Celebration Raspberry,,240 g,5.27,Snacks,Yes,,6
+CPG-0029,Leclerc Celebration Caramel,,240 g,5.27,Snacks,Yes,,6
+CPG-0030,Biscoff Shortbread Fingers,,170 g,3.45,Snacks,Yes,,3
+CPG-0031,Ritz OG,,180 g,5.29,Snacks,Yes,,2
+CPG-0032,Ritz Low Sodium,,180 g,5.29,Snacks,Yes,,2
+CPG-0033,Ritz Cheddar,,180 g,5.29,Snacks,Yes,,4
+CPG-0034,Chips Ahoy Chunks,,251 g,5.50,Snacks,Yes,,3
+CPG-0035,Chips Ahoy Chewy Limited,,281 g,5.50,Snacks,Yes,,1
+CPG-0036,Chips Ahoy Rainbow,,258 g,5.50,Snacks,Yes,,6
+CPG-0037,Chips Ahoy Chewy Tenders,,271 g,5.50,Snacks,Yes,,6
+CPG-0038,Chips Ahoy OG,,258 g,5.50,Snacks,Yes,,3
+CPG-0039,Mini Chips Ahoy Rainbow,,144 g,4.99,Snacks,Yes,,2
+CPG-0040,Lady Sarah Cream Wafers Chocolate,,200 g,4.38,Snacks,Yes,,7
+CPG-0041,Lady Sarah Cream Wafers Strawberry,,200 g,4.38,Snacks,Yes,,3
+CPG-0042,Lady Sarah Cream Wafers Vanilla,,200 g,4.38,Snacks,Yes,,3
+CPG-0043,Leta Cheddar Cheese Crackers,,144 g,4.59,Snacks,Yes,,2
+CPG-0044,Triscuit Thin Crisps Jalapeño,,200 g,5.49,Snacks,No,,0
+CPG-0045,Paris G OG,,300 g,4.29,Snacks,Yes,,2
+CPG-0046,Vector Suitz Rusk Semolina Toast,,350 g,7.99,Snacks,Yes,,2
+CPG-0047,Daal – Kardinal (Assorted),,155 g,3.29,Grocery,Yes,,2
+CPG-0048,Daal – Assorted,,250 g,3.99,Grocery,Yes,,4
+CPG-0049,Banana Chips (Sweetened),,280 g,4.99,Grocery,Yes,,4
+CPG-0050,Khari Puff Pastry,,400 g,5.99,Grocery,Yes,,3
+CPG-0051,Khari Puff Pastry,,600 g,5.99,Grocery,Yes,,2
+CPG-0052,Bhakharwadi,,600 g,5.99,Grocery,Yes,,2
+CPG-0053,Bhakarwadi (Spicy),,600 g,5.99,Grocery,Yes,,3
+CPG-0054,Khari Puff Pastry,,400 g,5.99,Grocery,Yes,,3
+CPG-0055,Fini Jelly Beans (Assorted),,500 ml,5.99,Grocery,Yes,,1
+CPG-0056,Fini Jelly Beans (Assorted),,500 ml,5.99,Grocery,Yes,,3
+CPG-0057,Fini Jelly Beans (Assorted),,750 ml,5.99,Grocery,Yes,,1
+CPG-0058,Fini Jelly Beans (Assorted),,750 ml,5.99,Grocery,Yes,,3
+CPG-0059,Banana Chips (Salted),,250 g,4.29,Grocery,Yes,,2
+CPG-0060,Bhujia Sev (Plain),,250 g,4.29,Grocery,Yes,,3
+CPG-0061,Bhujia Sev (Plain),,250 g,4.29,Grocery,Yes,,1
+CPG-0062,Banana Chips (Spicy),,250 g,4.29,Grocery,Yes,,1
+CPG-0063,Banana Chips (Salted),,250 g,4.29,Grocery,Yes,,3
+CPG-0064,Banana Chips (Sweetened),,250 g,4.29,Grocery,Yes,,1
+CPG-0065,Fini Strawberry Tubes,,600 ml,8.99,Grocery,Yes,,5
+CPG-0066,Fini Sour Tubes,,650 ml,8.99,Grocery,Yes,,2
+CPG-0067,Fini Sour Bites,,700 ml,6.99,Grocery,Yes,,1
+CPG-0068,Oreo Original,,270 g,5.99,Snacks,Yes,,12
+CPG-0069,Oreo Mini,,150 g,4.99,Snacks,Yes,,2
+CPG-0070,Breaktime Oatmeal,,250 g,3.59,Snacks,Yes,,7
+CPG-0071,Breaktime Chocolate Chip,,250 g,3.59,Snacks,Yes,,6
+CPG-0072,Breaktime Coconut,,250 g,3.59,Snacks,Yes,,1
+CPG-0073,Florish Mug Cake Berry,,75 g,3.99,Snacks,Yes,,3
+CPG-0074,Florish Mug Cake Maple,,75 g,3.99,Snacks,Yes,,3
+CPG-0075,Corn Flakes OG,,340 g,6.09,Cereal,Yes,,1
+CPG-0076,Froot Loops OG,,230 g,6.89,Cereal,Yes,,2
+CPG-0077,Froot Loops Marshmallow,,311 g,6.99,Cereal,Yes,,2
+CPG-0078,Froot Loops Strawberry,,355 g,6.99,Cereal,Yes,,2
+CPG-0079,Honey Nut Cheerios,,272 g,6.66,Cereal,Yes,,2
+CPG-0080,OG Oatmeal Squares,,270 g,6.99,Cereal,Yes,,3
+CPG-0081,Weetabix,,400 g,6.97,Cereal,Yes,,2
+CPG-0082,Honey Bunches of Oats,,340 g,6.99,Cereal,No,,0
+CPG-0083,Cap’n Crunch Cinnamon,,285 g,6.99,Cereal,No,,0
+CPG-0084,Quaker Harvest Crunch,,475 g,7.49,Cereal,Yes,,1
+CPG-0085,Famous Amos Choco Chip Cookies,,56 g,1.79,Snacks,Yes,,11
+CPG-0086,Mr. Noodles Spicy Chicken,,85 g,1.66,Grocery,Yes,,26
+CPG-0087,Mr. Noodles Vegetables,,85 g,1.66,Grocery,Yes,,14
+CPG-0088,Mr. Noodles Beef,,85 g,1.66,Grocery,No,,0
+CPG-0089,Mr. Noodles Chicken,,85 g,1.66,Grocery,No,,0
+CPG-0090,Mr. Noodles Cup Vegetable,,64 g,2.49,Grocery,Yes,,3
+CPG-0091,Mr. Noodles Cup Beef,,64 g,2.49,Grocery,Yes,,6
+CPG-0092,Mr. Noodles Cup Spicy Chicken,,64 g,2.49,Grocery,Yes,,14
+CPG-0093,Budak Carbonara Cup,,105 g,4.30,Grocery,Yes,,6
+CPG-0094,KD Mac & Cheese,,200 g,3.99,Grocery,Yes,,6
+CPG-0095,KFI Tandoori Sauce,,455 ml,7.99,Grocery,Yes,,3
+CPG-0096,KFI Masala Sauce,,455 ml,7.99,Grocery,Yes,,3
+CPG-0097,KFI Korma Sauce,,455 ml,7.99,Grocery,Yes,,3
+CPG-0098,Green Chilli Pickle (Jain),,275 ml,,Grocery,Yes,,2
+CPG-0099,Patak’s Lime Pickle,,350 ml,3.99,Grocery,Yes,,1
+CPG-0100,Green Chilli Pickle (Relish),,,,Grocery,Yes,,1
+CPG-0101,Piri Piri Red Powder,,500 ml,5.99,Grocery,Yes,,4
+CPG-0102,Ginger Garlic Paste,,,3.99,Grocery,No,,0
+CPG-0103,KFI Green Chutney Sauce,,234 ml,6.29,Grocery,Yes,,2
+CPG-0104,Heinz Sweet Relish,,450 ml,7.59,Grocery,Yes,,1
+CPG-0105,BBQ Mango Sauce,,,8.99,Grocery,Yes,,1
+CPG-0106,Subhani Sweet Onion Sauce,,473 ml,7.99,Grocery,Yes,,1
+CPG-0107,Subhani Chocolate Sauce,,473 ml,7.99,Grocery,Yes,,1
+CPG-0108,Subhani Roasted Garlic Sauce,,473 ml,7.99,Grocery,Yes,,1
+CPG-0109,Heinz Tomato Ketchup,,375 ml,6.34,Grocery,Yes,,6
+CPG-0110,French’s Tomato Ketchup,,1 L,8.99,Grocery,No,,0
+CPG-0111,Kraft French Dressing,,425 ml,6.69,Grocery,Yes,,1
+CPG-0112,Kraft (unspecified dressing),,425 ml,6.69,Grocery,No,,0
+CPG-0113,Kraft Creamy Ranch,,425 ml,6.69,Grocery,Yes,,3
+CPG-0114,Sir Kensington’s Mayonnaise,,300 ml,6.99,Grocery,Yes,,1
+CPG-0115,Minced Ginger,,210 g,4.99,Grocery,Yes,,2
+CPG-0116,French’s Tomato Mustard,,325 ml,5.99,Grocery,Yes,,2
+CPG-0117,French’s Yellow Mustard,,325 ml,4.99,Grocery,Yes,,2
+CPG-0118,Old Dutch Popcorn Twists Toffee,,175 g,5.29,Crisps,Yes,,2
+CPG-0119,Old Dutch Popcorn Twists,,55 g,2.19,Crisps,Yes,,5
+CPG-0120,Old Dutch Restaurant – Red & White,,275 g,5.29,Crisps,Yes,,3
+CPG-0121,Old Dutch Restaurant – Deli Rounds,,280 g,5.29,Crisps,Yes,,3
+CPG-0122,Old Dutch Arriba Nacho Cheese,,245 g,5.29,Crisps,Yes,,6
+CPG-0123,Old Dutch Arriba Zesty Taco,,245 g,5.29,Crisps,Yes,,4
+CPG-0124,Old Dutch Arriba Nacho Cheese,,84 g,2.49,Crisps,Yes,,1
+CPG-0125,Old Dutch Arriba Zesty Taco,,84 g,2.49,Crisps,Yes,,4
+CPG-0126,Dutch Crunch Kettle Cook All Dressed,,200 g,5.29,Crisps,Yes,,4
+CPG-0127,Dutch Crunch Kettle Cook Salt & Vinegar,,200 g,5.29,Crisps,Yes,,8
+CPG-0128,Dutch Crunch Kettle Cook Spicy Ketchup,,200 g,5.29,Crisps,No,,0
+CPG-0129,Dutch Crunch Kettle Cook Cream & Dill,,200 g,5.29,Crisps,Yes,,3
+CPG-0130,Dutch Crunch Kettle Cook Jalapeño,,200 g,5.29,Crisps,Yes,,5
+CPG-0131,Dutch Crunch Kettle Cook BBQ,,200 g,5.29,Crisps,Yes,,4
+CPG-0132,Dutch Crunch Kettle Cook OG,,200 g,5.29,Crisps,Yes,,2
+CPG-0133,Dutch Crunch Kettle Cook All Dressed,,60 g,2.49,Crisps,Yes,,6
+CPG-0134,Dutch Crunch Kettle Cook Jalapeño,,66 g,2.49,Crisps,Yes,,4
+CPG-0135,Old Dutch Humpty Dumpty Party OG,,250 g,5.29,Crisps,Yes,,4
+CPG-0136,Hawkins Cheezies,,210 g,4.57,Crisps,Yes,,6
+CPG-0137,Hawkins Cheezies,,70 g,2.39,Crisps,Yes,,18
+CPG-0138,Tostitos Rounds,,295 g,5.52,Crisps,Yes,,2
+CPG-0139,Old Dutch Salsa Mild,,430 ml,5.52,Chip Dips,Yes,,4
+CPG-0140,Old Dutch Salsa Con Queso,,400 ml,5.52,Chip Dips,Yes,,6
+CPG-0141,Shan Chicken Masala Paste,,150 g,8.74,Grocery,Yes,,1
+CPG-0142,Heinz Wasabi,,310 ml,9.95,Grocery,Yes,,1
+CPG-0143,Shan Pulao Masala,,300 g,8.74,Grocery,Yes,,2
+CPG-0144,Shan Meat Masala,,400 g,8.74,Grocery,Yes,,1
+CPG-0145,Shan Garam Masala,,100 g,5.50,Grocery,Yes,,1
+CPG-0146,Shan Biryani Kanda,,100 g,3.99,Grocery,Yes,,1
+CPG-0147,Shan Lemon Mustard Kanda,,100 g,3.99,Grocery,Yes,,2
+CPG-0148,PTI Cumin Powder,,400 g,5.99,Grocery,Yes,,1
+CPG-0149,PTI Cumin Powder,,400 g,9.46,Grocery,Yes,,1
+CPG-0150,PTI Cumin Seeds,,400 g,9.76,Grocery,Yes,,1
+CPG-0151,PTI Cinnamon Sticks,,200 g,,Grocery,Yes,,2
+CPG-0152,Taza Cumin Whole,,100 g,4.99,Grocery,Yes,,1
+CPG-0153,Taza Turmeric Powder,,100 g,4.99,Grocery,Yes,,2
+CPG-0154,Taza Sesame Whole,,100 g,4.99,Grocery,Yes,,4
+CPG-0155,Taza Methi Powder,,100 g,4.99,Grocery,Yes,,1
+CPG-0156,Club House Pepper,,24 g,3.29,Grocery,Yes,,11
+CPG-0157,Great Value Turmeric,,90 g,4.99,Grocery,Yes,,1
+CPG-0158,Tandoori Masala (Hand),,500 g,3.99,Grocery,Yes,,1
+CPG-0159,House of Spices Kashmiri Masala,,100 g,3.99,Grocery,Yes,,5
+CPG-0160,Handi Butter Chicken,,60 g,3.99,Grocery,Yes,,5
+CPG-0161,Handi Bombay Biryani,,65 g,3.99,Grocery,Yes,,5
+CPG-0162,Paprika,,62 g,3.33,Grocery,Yes,,2
+CPG-0163,Seasoning Salt,,120 g,2.99,Grocery,Yes,,1
+CPG-0164,Old Dutch Medium Salsa,,430 ml,5.52,Chip Dips,Yes,,2
+CPG-0165,Jack Link’s Hickory Smoked,,80 g,8.99,Snacks,Yes,,3
+CPG-0166,Jack Link’s Jalapeño,,80 g,8.99,Snacks,Yes,,5
+CPG-0167,Jack Link’s Peppered,,80 g,8.99,Snacks,Yes,,4
+CPG-0168,Jack Link’s Sweet & Hot,,80 g,8.99,Snacks,Yes,,4
+CPG-0169,Jack Link’s Bacon Jerky,,65 g,9.00,Snacks,Yes,,3
+CPG-0170,Jack Link’s OG,,80 g,8.99,Snacks,No,,0
+CPG-0171,Jack Link’s Teriyaki,,80 g,8.99,Snacks,Yes,,4
+CPG-0172,Jack Link’s OG,,35 g,4.99,Snacks,Yes,,6
+CPG-0173,Jack Link’s Teriyaki,,35 g,4.99,Snacks,Yes,,6
+CPG-0174,Spitz Sunflower Dill Pickle,,210 g,3.67,Snacks,Yes,,8
+CPG-0175,Spitz Sunflower Dill Salted,,210 g,3.67,Snacks,Yes,,3
+CPG-0176,Spitz Sunflower Pepper,,210 g,3.67,Snacks,Yes,,3
+CPG-0177,Old Dutch Sunflower Roasted & Salted,,227 g,3.80,Snacks,Yes,,2
+CPG-0178,Old Dutch Sunflower Roasted Dill Pickle,,227 g,3.80,Snacks,Yes,,1
+CPG-0179,Old Dutch Sunflower Seasoned,,227 g,3.80,Snacks,Yes,,4
+CPG-0180,Old Dutch Peanuts BBQ,,65 g,2.38,Snacks,Yes,,9
+CPG-0181,Old Dutch Peanuts Roasted & Salted,,65 g,2.38,Snacks,Yes,,6
+CPG-0182,Corn Nuts OG,,48 g,1.43,Snacks,Yes,,12
+CPG-0183,Corn Nuts Ranch,,48 g,1.43,Snacks,Yes,,10
+CPG-0184,Corn Nuts BBQ,,48 g,1.43,Snacks,Yes,,7
+CPG-0185,Munchies Peanuts BBQ,,55 g,2.00,Snacks,Yes,,5
+CPG-0186,Basil Leaves,,22 g,2.99,Grocery,No,,0
+CPG-0187,Shan Bombay Biryani,,60 g,3.99,Grocery,No,,0
+CPG-0188,Great Value Ground Cinnamon,,125 g,5.99,Grocery,Yes,,3
+CPG-0189,Everest Garam Masala,,100 g,3.99,Grocery,Yes,,5
+CPG-0190,Knorr Parmesan,,125 g,7.99,Grocery,Yes,,1
+CPG-0191,Headlight Chili Powder,,35 g,2.99,Grocery,Yes,,1
+CPG-0192,Headlight Salt,,184 g,2.99,Grocery,No,,0
+CPG-0193,Komati White Vinegar,,45 g,4.99,Grocery,Yes,,2
+CPG-0194,Komati White Cooking Wine,,45 g,4.99,Grocery,Yes,,2
+CPG-0195,Piranha Lime Juice,,175 ml,4.99,Grocery,No,,0
+CPG-0196,Real Lemon Juice,,175 ml,2.49,Grocery,Yes,,2
+CPG-0197,Suraj Lentils,,540 ml,4.49,Grocery,Yes,,1
+CPG-0198,Diamond Harvest Chick Peas,,398 ml,3.99,Grocery,Yes,,8
+CPG-0199,Heinz Beans OG Sauce,,398 ml,4.29,Grocery,Yes,,8
+CPG-0200,Great Value Black Beans,,540 ml,4.09,Grocery,Yes,,1
+CPG-0201,Unico Four Bean Medley,,540 ml,4.09,Grocery,Yes,,3
+CPG-0202,Diamond Harvest Chick Peas,,540 ml,4.09,Grocery,No,,0
+CPG-0203,Unico Red Kidney Beans,,540 ml,4.09,Grocery,Yes,,1
+CPG-0204,Great Value Dark Kidney Beans,,540 ml,4.09,Grocery,Yes,,2
+CPG-0205,Great Value Six Bean Medley,,540 ml,4.09,Grocery,Yes,,3
+CPG-0206,Sannine Coconut Cream,,284 ml,4.29,Grocery,Yes,,3
+CPG-0207,Hatsuya Green Beans,,398 ml,3.99,Grocery,Yes,,2
+CPG-0208,Goya Black Turtle Beans,,400 g,4.99,Grocery,Yes,,2
+CPG-0209,Doritos Nacho Cheese,,72 g,2.39,Crisps,Yes,,5
+CPG-0210,Doritos Sweet Chili Heat,,72 g,2.61,Crisps,Yes,,10
+CPG-0211,Doritos Zesty Cheese,,72 g,2.39,Crisps,Yes,,5
+CPG-0212,Doritos Cool Ranch,,72 g,2.39,Crisps,Yes,,7
+CPG-0213,Doritos Flamin’ Hot,,65 g,2.39,Crisps,Yes,,8
+CPG-0214,Ruffles Sour Cream & Onion,,200 g,5.24,Crisps,Yes,,3
+CPG-0215,Ruffles All Dressed,,200 g,5.24,Crisps,Yes,,2
+CPG-0216,Ruffles Sour Cream & Bacon,,200 g,5.24,Crisps,Yes,,2
+CPG-0217,Ruffles Sour Cream & Onion,,66 g,2.39,Crisps,Yes,,8
+CPG-0218,Ruffles All Dressed,,66 g,2.39,Crisps,Yes,,4
+CPG-0219,Ms. Vickie’s Sweet Chili & Sour Cream,,200 g,5.48,Crisps,Yes,,3
+CPG-0220,Ms. Vickie’s Sea Salt & Malt Vinegar,,200 g,5.48,Crisps,Yes,,2
+CPG-0221,Ms. Vickie’s OG,,200 g,5.48,Crisps,Yes,,3
+CPG-0222,Ms. Vickie’s Spicy Dill Pickle,,200 g,5.48,Crisps,Yes,,3
+CPG-0223,Ms. Vickie’s Sweet Chili & Sour Cream,,59 g,2.39,Crisps,Yes,,2
+CPG-0224,Ms. Vickie’s Sea Salt & Malt Vinegar,,59 g,2.49,Crisps,Yes,,4
+CPG-0225,Ms. Vickie’s OG,,59 g,2.39,Crisps,Yes,,2
+CPG-0226,PC Kettle Cooked Sea Salt & Pepper,,200 g,5.99,Crisps,No,,0
+CPG-0227,PC Kettle Cooked Spicy Dill Pickle,,200 g,5.99,Crisps,No,,0
+CPG-0228,Smartfoods Popcorn Movie Nacho Butter,,416 g,5.49,Crisps,Yes,,3
+CPG-0229,Smartfoods Popcorn White Cheddar,,200 g,5.49,Crisps,Yes,,1
+CPG-0230,Smartfoods Popcorn Jalapeño Cheddar,,418 g,5.49,Crisps,No,,0
+CPG-0231,Smartfoods Popcorn Sour Cream & Onion,,175 g,5.49,Crisps,Yes,,2
+CPG-0232,Sabra Roasted Red Pepper Hummus,,380 g,4.99,Grocery,Yes,,2
+CPG-0233,Sabra Classic Hummus Dip,,400 g,4.99,Grocery,Yes,,2
+CPG-0234,Mario’s Hummus,,350 g,6.99,Grocery,Yes,,2
+CPG-0235,Sabra Red Chili Hummus,,400 g,4.99,Grocery,Yes,,2
+CPG-0236,Umani Basil Pesto,,142 g,4.75,Grocery,Yes,,2
+CPG-0237,OK Premium Coconut Milk,,400 ml,,Grocery,Yes,,6
+CPG-0238,Kanan Coconut Milk,,400 ml,4.59,Grocery,Yes,,1
+CPG-0239,Pure Thai Coconut Milk,,400 ml,4.49,Grocery,Yes,,2
+CPG-0240,Campbell’s Tomato Soup,,284 ml,3.48,Grocery,Yes,,2
+CPG-0241,Campbell’s Vegetable Soup,,284 ml,3.48,Grocery,No,,0
+CPG-0242,Earth Brand Almond Milk,,300 ml,6.15,Grocery,Yes,,1
+CPG-0243,Canadian Farms Almond Milk,,354 ml,4.28,Grocery,Yes,,1
+CPG-0244,Al Safa Creamy Chicken,,284 ml,3.80,Grocery,Yes,,2
+CPG-0245,Al Safa Creamy Butter Chicken,,284 ml,3.80,Grocery,Yes,,2
+CPG-0246,Patak’s Tandoori Paste,,150 ml,2.15,Grocery,No,,0
+CPG-0247,Primo Tomato Paste,,5 ml,,Grocery,Yes,,6
+CPG-0248,VH Soya Sauce,,380 ml,6.49,Grocery,Yes,,1
+CPG-0249,T&T Dark Soy Sauce,,500 ml,,Grocery,Yes,,1
+CPG-0250,Al Dayaa Pomegranate Molasses,,250 ml,,Grocery,Yes,,1
+CPG-0251,Lee Kum Kee Black Bean Sauce,,500 ml,5.78,Grocery,Yes,,1
+CPG-0252,Koon Chun Hoisin Sauce,,550 ml,4.28,Grocery,Yes,,3
+CPG-0253,Soy Sauce,,500 ml,4.99,Grocery,Yes,,3
+CPG-0254,Frank’s RedHot Xtra Hot,,355 ml,7.61,Grocery,Yes,,1
+CPG-0255,Smartfoods White Cheddar,,50 g,2.39,Crisps,Yes,,9
+CPG-0256,Lay’s Classic,,235 g,5.81,Crisps,Yes,,4
+CPG-0257,Lay’s Dill Pickle,,220 g,5.81,Crisps,Yes,,3
+CPG-0258,Lay’s Sour Cream & Onion,,220 g,5.69,Crisps,No,,0
+CPG-0259,Lay’s BBQ,,220 g,5.81,Crisps,Yes,,5
+CPG-0260,Lay’s Ketchup,,220 g,5.81,Crisps,Yes,,4
+CPG-0261,Lay’s Salt & Vinegar,,220 g,5.81,Crisps,Yes,,2
+CPG-0262,Lay’s Turkey Dinner,,220 g,5.81,Crisps,Yes,,4
+CPG-0263,Lay’s Classic,,66 g,2.59,Crisps,Yes,,7
+CPG-0264,Lay’s Ketchup,,66 g,2.59,Crisps,Yes,,3
+CPG-0265,Lay’s Salt & Vinegar,,66 g,2.59,Crisps,Yes,,6
+CPG-0266,Pringles Sour Cream & Onion,,156 g,5.15,Crisps,No,,0
+CPG-0267,Pringles All Dressed,,156 g,5.19,Crisps,Yes,,8
+CPG-0268,Pringles BBQ,,156 g,5.15,Crisps,Yes,,4
+CPG-0269,Pringles OG,,156 g,5.15,Crisps,Yes,,6
+CPG-0270,Pringles Salt & Vinegar,,156 g,5.15,Crisps,Yes,,4
+CPG-0271,Pringles Cheddar Cheese,,156 g,5.15,Crisps,No,,0
+CPG-0272,Pringles OG,,37 g,2.00,Crisps,Yes,,9
+CPG-0273,Pringles Sour Cream & Onion,,39 g,1.99,Crisps,Yes,,9
+CPG-0274,Crispers Ranch,,145 g,3.99,Crisps,Yes,,2
+CPG-0275,Crispers Smokey Bacon,,145 g,3.99,Crisps,Yes,,2
+CPG-0276,Crispers Salt & Vinegar,,145 g,3.99,Crisps,Yes,,1
+CPG-0277,Crispers Jalapeño,,145 g,3.99,Crisps,Yes,,2
+CPG-0278,Oral-B Soft Toothbrush,,,9.99,,Yes,,2
+CPG-0279,Closeup Slimcare Toothbrush,,,4.49,Misc,Yes,,3
+CPG-0280,Puff-off Travel Toothbrush,,,3.00,Drugs,Yes,,5
+CPG-0281,Plackers Dental Flossers,,,4.99,Misc,No,,0
+CPG-0282,Nail Clippers (S & Small),,,3.99,Heat,Yes,,5
+CPG-0283,Elvis’ Pet Nail Scissors,,,7.99,,Yes,,3
+CPG-0284,Lumident Grape Candies,,,5.99,Misc,Yes,,3
+CPG-0285,Omni Vanda Reusable Fuser,,,7.99,Misc,Yes,,2
+CPG-0286,Professional Oral Care Kit,,,5.79,Drugs,Yes,,2
+CPG-0287,Anlette Blue II (S),,,6.99,Houseware,No,,0
+CPG-0288,BIC Twin Select 10pk,,,8.99,Grocery,Yes,,4
+CPG-0289,Fair Hair Care,,,1.99,,No,,0
+CPG-0290,Snap Clip 4pc,,,4.99,Misc,Yes,,3
+CPG-0291,Baby Bottle Brush Essential,,,3.99,Toys,Yes,,2
+CPG-0292,Goody Detangling Comb,,,4.75,Toys,Yes,,2
+CPG-0293,Sophie Bobby Pins,,,5.99,Misc,Yes,,1
+CPG-0294,Elbow Support,,,4.99,Drugs,Yes,,4
+CPG-0295,Lumbar Jersey Bracket,,,3.33,Drugs,Yes,,2
+CPG-0296,Blister Medicated Lip Balm,,,4.27,Drugs,No,,0
+CPG-0297,Quies Ears,,,5.49,Misc,Yes,,8
+CPG-0298,Quick Mucus Clean,,,5.99,Drugs,No,,0
+CPG-0299,Magnam EQ Original 30k,,,5.99,Drugs,Yes,,4
+CPG-0300,Quick Sani Pain,,,5.99,Drugs,Yes,,5
+CPG-0301,Zen Gaz,,,9.79,Torches,Yes,,26
+CPG-0302,Maven Pocket Torch,,,9.99,Torches,Yes,,22
+CPG-0303,Maven Diamond Torch,,,34.99,Torches,Yes,,2
+CPG-0304,Maven Triple Jet,,,19.99,Torches,Yes,,10
+CPG-0305,Maven Alpha,,,14.99,Torches,Yes,,6
+CPG-0306,Maven Perumium,,,22.99,Torches,Yes,,6
+CPG-0307,Spider Metal,,,44.99,Torches,Yes,,3
+CPG-0308,Click It 4 Flame,,,14.28,Torches,Yes,,9
+CPG-0309,Click It Dual Gun,,,21.99,Torches,Yes,,4
+CPG-0310,Click It Torch Gun,,,25.00,Torches,Yes,,8
+CPG-0311,Click It Torch GT-07,,,34.99,Torches,Yes,,4
+CPG-0312,Scorch Fancy Lighter,,,39.99,Torches,Yes,,8
+CPG-0313,Scorch Bendable Torch,,,39.99,Torches,Yes,,1
+CPG-0314,Scorch Cigar Lighter Set,,,44.99,Torches,Yes,,2
+CPG-0315,Soul Lighter Refill,,18 ml,2.86,Butane,Yes,,13
+CPG-0316,Soul Premium,,142 ml,6.99,Butane,Yes,,11
+CPG-0317,Whip-It,,300 ml,9.99,Butane,Yes,,14
+CPG-0318,London,,300 ml,11.99,Butane,Yes,,16
+CPG-0319,Premium Butane,,420 ml,13.99,Butane,Yes,,4
+CPG-0320,2-in-1 Lighter Stash Can,,,34.99,Misc,Yes,,2
+CPG-0321,Bong Gift Set,,,94.99,Misc,Yes,,4
+CPG-0322,Bong Gift Set w/ Box,,,100.00,Misc,Yes,,2
+CPG-0323,Sour Patch OG,,150 g,4.67,Candy,No,,0
+CPG-0324,Sour Patch Heads 2 in 1,,154 g,4.67,Candy,No,,0
+CPG-0325,Sour Patch Strawberry,,154 g,4.67,Candy,No,,0
+CPG-0326,Sour Patch Extreme,,150 g,4.69,Candy,No,,0
+CPG-0327,Sour Patch Berries,,150 g,4.67,Candy,No,,0
+CPG-0328,Sour Patch Grape,,154 g,4.67,Candy,No,,0
+CPG-0329,Sour Patch Watermelon,,154 g,4.67,Candy,No,,0
+CPG-0330,Sour Patch Sour Cherry Blasters,,154 g,4.67,Candy,No,,0
+CPG-0331,Sour Patch Glow Ups,,135 g,4.67,Candy,No,,0
+CPG-0332,Sour Patch Blue Raspberry,,150 g,4.67,Candy,No,,0
+CPG-0333,Sour Patch Red & Green,,315 g,8.69,Candy,No,,0
+CPG-0334,Sour Patch Lemonade,,315 g,8.69,Candy,No,,0
+CPG-0335,Sour Patch OG,,315 g,8.69,Candy,No,,0
+CPG-0336,Sour Patch Fun Mix,,315 g,8.69,Candy,No,,0
+CPG-0337,Twizzlers Pull ’N’ Peel Cherry,,396 g,4.76,Candy,No,,0
+CPG-0338,Twizzlers Twists Torsades Rainbow,,350 g,4.76,Candy,No,,0
+CPG-0339,Twizzlers Twists Torsades Strawberry,,454 g,4.76,Candy,No,,0
+CPG-0340,Twizzlers Filled Pink Lemonade,,318 g,4.76,Candy,No,,0
+CPG-0341,Twizzlers Filled Orange Cream,,318 g,4.76,Candy,No,,0
+CPG-0342,Jolly Rancher Gummies Sours,,182 g,4.67,Candy,No,,0
+CPG-0343,Jolly Rancher Gummies Sours Tropical,,182 g,4.67,Candy,No,,0
+CPG-0344,Jolly Rancher Gummies Sours Berry,,182 g,4.67,Candy,No,,0
+CPG-0345,Jolly Rancher Fruity Sours,,182 g,4.67,Candy,Yes,,2
+CPG-0346,Jolly Rancher Original,,182 g,4.67,Candy,Yes,,11
+CPG-0347,Sunrype,,900 ml,3.80,Drinks,No,,0
+CPG-0348,Oasis,,300 ml,1.99,Drinks,No,,0
+CPG-0349,Tasco Coconut Juice,,500 ml,3.29,Drinks,No,,0
+CPG-0350,T.A.S Coconut Juice,,310 ml,2.29,Drinks,No,,0
+CPG-0351,Mr. Brown,,240 ml,2.38,Drinks,No,,0
+CPG-0352,Pure Leaf,,547 ml,3.49,Drinks,No,,0
+CPG-0353,Arizona Ice Tea,,680 ml,2.67,Drinks,No,,0
+CPG-0354,Pepsi (Bottle),,591 ml,3.49,Drinks,No,,0
+CPG-0355,Crush (Bottle),,591 ml,3.49,Drinks,No,,0
+CPG-0356,Pepsi (Can),,355 ml,1.62,Drinks,No,,0
+CPG-0357,Crush (Can),,355 ml,1.62,Drinks,No,,0
+CPG-0358,Mug (Can),,355 ml,1.62,Drinks,No,,0
+CPG-0359,7UP (Can),,355 ml,1.62,Drinks,No,,0
+CPG-0360,BioSteel,,500 ml,2.76,Drinks,No,,0
+CPG-0361,Simple Aloe Vera,,500 ml,2.49,Drinks,No,,0
+CPG-0362,Minute Maid,,355 ml,2.85,Drinks,No,,0
+CPG-0363,Fuze,,500 ml,3.50,Drinks,No,,0
+CPG-0364,Powerade,,710 ml,2.99,Drinks,No,,0
+CPG-0365,Peace Tea,,695 ml,2.99,Drinks,No,,0
+CPG-0366,Coke Cola,,500 ml,3.25,Drinks,No,,0
+CPG-0367,Canada Dry,,500 ml,3.25,Drinks,No,,0
+CPG-0368,Fanta,,500 ml,3.25,Drinks,No,,0
+CPG-0369,Sprite + Fresca,,500 ml,3.25,Drinks,No,,0
+CPG-0370,Coke Cola,,355 ml,1.62,Drinks,No,,0
+CPG-0371,Chocolate (Almonds),,45 g,1.99,Candy,Yes,,19
+CPG-0372,Chocolate (Peanuts),,45 g,1.99,Candy,Yes,,14
+CPG-0373,London (Milk),,85 g,3.39,Candy,Yes,,6
+CPG-0374,London (Hazelnut),,85 g,3.39,Candy,Yes,,14
+CPG-0375,Crunch (Milk),,44 g,2.09,Candy,Yes,,19
+CPG-0376,Big Turk,,50 g,2.10,Candy,Yes,,17
+CPG-0377,Smarties Rockets,,—,2.69,Candy,Yes,,4
+CPG-0378,Smarties,,45 g,1.99,Candy,Yes,,28
+CPG-0379,Rominz / Rominz?,,—,1.95,Candy,Yes,,15
+CPG-0380,Aero Bar,,93 g,3.13,Candy,Yes,,24
+CPG-0381,KitKat,,45 g,2.09,Candy,Yes,,6
+CPG-0382,Caramilk,,—,2.64,Candy,Yes,,19
+CPG-0383,3 Musketeers,,54 g,1.99,Candy,Yes,,22
+CPG-0384,Crunch (Mini?),,48 g,2.29,Candy,Yes,,5
+CPG-0385,KitKat 2 Finger,,72 g,3.35,Candy,Yes,,2
+CPG-0386,KitKat Chunky,,44 g,2.25,Candy,Yes,,16
+CPG-0387,Mentos Gum (Spearmint),,50 pcs,4.99,Candy,Yes,,7
+CPG-0388,Mentos (Cinnamon),,5 pcs,4.99,Candy,Yes,,4
+CPG-0389,Juicy Fruit,,60 pcs,5.99,Candy,Yes,,2
+CPG-0390,Dentyne Fire,,60 pcs,5.99,Candy,No,,0
+CPG-0391,Ludent Vibes,,40 pcs,4.99,Candy,No,,0
+CPG-0392,Mint rocket pop,,—,4.99,Candy,Yes,,4
+CPG-0393,mint roclet candy,,—,4.99,Candy,Yes,,4
+CPG-0394,Fanta,,355 ml,1.62,Drinks,No,,0
+CPG-0395,Sprite,,355 ml,1.62,Drinks,No,,0
+CPG-0396,Canada Dry,,355 ml,1.62,Drinks,No,,0
+CPG-0397,A & W,,355 ml,1.62,Drinks,No,,0
+CPG-0398,Cove Probiotic,,355 ml,2.29,Drinks,No,,0
+CPG-0399,Cove Kombucha,,355 ml,3.99,Drinks,No,,0
+CPG-0400,Bubly,,355 ml,1.81,Drinks,No,,0
+CPG-0401,Molson Exel,,355 ml,1.99,Drinks,No,,0
+CPG-0402,White Claw,,355 ml,2.40,Drinks,No,,0
+CPG-0403,Monster,,473 ml,3.80,Drinks,No,,0
+CPG-0404,Reign Storm,,355 ml,3.24,Drinks,No,,0
+CPG-0405,Celsius,,355 ml,3.41,Drinks,No,,0
+CPG-0406,NOS,,710 ml,5.29,Drinks,No,,0
+CPG-0407,Core Power,,414 ml,5.10,Drinks,No,,0
+CPG-0408,Evian,,1 L,3.49,Drinks,No,,0
+CPG-0409,Pure Life,,1.5 L,2.69,Drinks,No,,0
+CPG-0410,Pure Life,,710 ml,2.00,Drinks,No,,0
+CPG-0411,Pure Life,,500 ml,1.81,Drinks,No,,0
+CPG-0412,Smart Water,,1 L,3.99,Drinks,No,,0
+CPG-0413,Smart Water,,591 ml,2.89,Drinks,No,,0
+CPG-0414,Dasani,,591 ml,2.09,Drinks,No,,0
+CPG-0415,Sparkling Ice,,503 ml,2.99,Drinks,No,,0
+CPG-0416,Gatorade,,591 ml,2.99,Drinks,No,,0
+CPG-0417,Gatorade,,710 ml,3.29,Drinks,No,,0
+CPG-0418,Gatorade,,828 ml,4.79,Drinks,No,,0
+CPG-0419,Excel (White),,60 Pcs,5.99,Candy,No,,0
+CPG-0420,Excel (Platinum),,60 Pcs,5.99,Candy,No,,0
+CPG-0421,Excel (Spearmint),,60 Pcs,5.99,Candy,No,,0
+CPG-0422,Excel (Peppermint),,60 Pcs,5.99,Candy,No,,0
+CPG-0423,Excel (Spearmint Ice),,60 Pcs,5.99,Candy,No,,0
+CPG-0424,Excel (Blueberry),,60 Pcs,5.99,Candy,No,,0
+CPG-0425,5-Gum (Watermelon),,15 Pcs,2.62,Candy,No,,0
+CPG-0426,5-Gum (Wintermint),,15 Pcs,2.62,Candy,No,,0
+CPG-0427,5-Gum (Peppermint),,15 Pcs,2.62,Candy,No,,0
+CPG-0428,5-Gum (Strawberry),,15 Pcs,2.62,Candy,No,,0
+CPG-0429,5-Gum (Spearmint),,5 Pcs,2.62,Candy,No,,0
+CPG-0430,Trident (Tropical),,14 Pcs,2.62,Candy,No,,0
+CPG-0431,Trident (Bubblegum),,14 Pcs,2.62,Candy,No,,0
+CPG-0432,Trident (Spearmint),,14 Pcs,2.62,Candy,No,,0
+CPG-0433,Trident (Wintermint),,14 Pcs,2.62,Candy,No,,0
+CPG-0434,Trident (Peppermint),,14 Pcs,2.62,Candy,No,,0
+CPG-0435,Doublemint Gum (Original),,15 Pcs,2.62,Candy,No,,0
+CPG-0436,Dentine Ice (Arctic Bubble),,12 Pcs,2.38,Candy,No,,0
+CPG-0437,Dentine Ice (Spearmint),,12 Pcs,2.38,Candy,No,,0
+CPG-0438,Dentine Ice Fire,,12 Pcs,2.38,Candy,No,,0
+CPG-0439,Dentine Ice Avalanche,,12 Pcs,2.38,Candy,No,,0
+CPG-0440,Bonibons,,52 g,1.90,Candy,No,,0
+CPG-0441,Toblerone,,35 g,1.90,Candy,No,,0
+CPG-0442,Trojan Naked Sensations,,,5.99,Misc,Yes,,5
+CPG-0443,Trojan Ultra Thin,,,5.99,Drugs,No,,0
+CPG-0444,Bikini Line Shaver (2 pk),,,5.99,Misc,Yes,,2
+CPG-0445,Gravol Ginger 8 Gel Capsules,,,10.49,Drugs,No,,0
+CPG-0446,Vapor Inhaler,,,3.99,Drugs,Yes,,9
+CPG-0447,Advil 10 Tablets,,,5.99,Drugs,Yes,,9
+CPG-0448,Trojan Classic,,,5.99,Drugs,No,,0
+CPG-0449,Tylenol Extra Strength DS,,,7.60,Drugs,Yes,,7
+CPG-0450,Advil Liqui-Gels 12 Cap,,,9.99,Drugs,No,,0
+CPG-0451,Diarrhea Relief 6 Cap,,2 mg,7.98,Drugs,Yes,,7
+CPG-0452,"Bandage 2"" Elastic Wrap Roll",,,5.26,Drugs,No,,0
+CPG-0453,Gauze Bandage Soft,,,4.66,First Aid,No,,0
+CPG-0454,Neon Waterproof Bandage Box,,,,First Aid,Yes,,3
+CPG-0455,KN95 Mask,,,5.99,First Aid,Yes,,1
+CPG-0456,Tylenol Infants,,15 ml,5.99,Drugs,Yes,,3
+CPG-0457,Derm Blue Ice Gel,,22 g,5.99,Drugs,Yes,,2
+CPG-0458,Pregnancy Test,,1 test,10.49,Drugs,Yes,,7
+CPG-0459,70% Alcohol Spray,,100 ml,4.99,Drugs,No,,0
+CPG-0460,70% Rubbing Alcohol,,225 ml,7.99,Drugs,Yes,,1
+CPG-0461,99% Rubbing Alcohol,,225 ml,8.99,Drugs,Yes,,4
+CPG-0462,Zarbee’s Children Syrup,,118 ml,14.99,Drugs,Yes,,2
+CPG-0463,Drisdan Nasal Spray,,15 ml,12.99,Drugs,Yes,,3
+CPG-0464,Visine Allergy Eyes,,15 ml,10.49,Drugs,No,,0
+CPG-0465,Earth’s Own,,946 ml,6.29,Dairy,Yes,,5
+CPG-0466,Almond Breeze,,946 ml,4.75,Dairy,Yes,,20
+CPG-0467,Delight Creamer,,946 ml,7.49,Dairy,Yes,,16
+CPG-0468,Spandek,,247 ml,3.99,Dairy,Yes,,8
+CPG-0469,Beatrice Choco Milk,,1.18 L,4.75,Dairy,Yes,,2
+CPG-0470,Beatrice Choco Milk,,1.18 L,3.99,Dairy,Yes,,3
+CPG-0471,Dairyland Eggnog,,1 L,4.49,Dairy,Yes,,2
+CPG-0472,Beatrice Milk 4%,,4 L,7.69,Dairy,Yes,,2
+CPG-0473,Beatrice Milk 3%,,4 L,7.99,Dairy,Yes,,2
+CPG-0474,Beatrice Milk 2%,,2 L,5.29,Dairy,Yes,,4
+CPG-0475,Beatrice Milk 3%,,2 L,5.99,Dairy,Yes,,6
+CPG-0476,Beatrice Milk 2%,,1 L,3.49,Dairy,Yes,,12
+CPG-0477,Beatrice Milk 3%,,1 L,4.09,Dairy,Yes,,2
+CPG-0478,Lactose-Free 2%,,2 L,8.99,Dairy,Yes,,1
+CPG-0479,Beatrice 1%,,1 L,4.10,Dairy,Yes,,4
+CPG-0480,Beatrice 0%,,1 L,3.49,Dairy,Yes,,2
+CPG-0481,Lactantia 1% / 2%,,473 ml,3.99,Dairy,Yes,,8
+CPG-0482,Del Monte Juices,,1.89 L,6.49,Juice,Yes,,13
+CPG-0483,Ocean Spray,,1.89 L,7.00,Juice,Yes,,7
+CPG-0484,Fresh & Pure,,1.89 L,7.99,Juice,Yes,,2
+CPG-0485,Okanagan Smoothie,,1.6 L,8.76,Juice,Yes,,3
+CPG-0486,Sunny D,,1 L,4.75,Juice,Yes,,6
+CPG-0487,Canada’s Favourite,,1.89 L,6.99,Juice,Yes,,3
+CPG-0488,Starbucks Double Shot,,444 ml,4.80,Drinks,No,,0
+CPG-0489,Starbucks Frapp + Caramel,,405 ml,4.81,Drinks,No,,0
+CPG-0490,Boost,,237 ml,3.49,Drinks,No,,0
+CPG-0491,Premier Protein,,325 ml,4.49,Drinks,No,,0
+CPG-0492,Body Armour,,473 ml,3.99,Drinks,No,,0
+CPG-0493,Vitamin Water,,591 ml,3.24,Drinks,No,,0
+CPG-0494,Candy (Can),,330 ml,1.99,Drinks,No,,0
+CPG-0495,Stewarts,,355 ml,2.85,Drinks,No,,0
+CPG-0496,Tonis,,355 ml,2.99,Drinks,No,,0
+CPG-0497,Kashmira Masala,,300 ml,2.99,Drinks,No,,0
+CPG-0498,Jarritos,,370 ml,2.86,Drinks,No,,0
+CPG-0499,Coca Cola (Glass),,355 ml,3.49,Drinks,No,,0
+CPG-0500,A&W,,341 ml,2.85,Drinks,No,,0
+CPG-0501,Corona,,330 ml,2.99,Drinks,No,,0
+CPG-0502,Coca Cola,,2 L,3.99,Drinks,No,,0
+CPG-0503,Pepsi,,2 L,3.99,Drinks,No,,0
+CPG-0504,OKF Aloe Vera,,1.5 L,5.49,Drinks,No,,0
+CPG-0505,Sourz Freezer,,1 L,4.30,Drinks,No,,0
+CPG-0506,Maaza / Maaza Preeze,,1 L,4.69,Drinks,No,,0
+CPG-0507,Red Bull,,250 ml,3.39,Drinks,No,,0
+CPG-0508,Red Bull,,355 ml,4.89,Drinks,No,,0
+CPG-0509,Red Bull,,473 ml,5.39,Drinks,No,,0
+CPG-0510,Dr Pepper,,355 ml,,Drinks,No,,0
+CPG-0511,Mini Tonic,,200 ml,,Drinks,No,,0
+CPG-0512,Ristorante,,355 g,7.99,Frozen Foods,Yes,,6
+CPG-0513,Dr. Oetker,,(illegible),,Frozen Foods,No,,0
+CPG-0514,Guiseppe Rising Crust,,720 g,10.49,Frozen Foods,Yes,,3
+CPG-0515,Guiseppe Rip n’ Share 4 Cheese,,480 g,,Frozen Foods,Yes,,1
+CPG-0516,Butter Chicken,,350 g,7.99,Frozen Foods,Yes,,3
+CPG-0517,Casa Di Mama Hawaiian,,400 g,7.99,Frozen Foods,Yes,,1
+CPG-0518,Great Value Butter Chicken,,356 g,9.99,Frozen Foods,Yes,,1
+CPG-0519,Suprema,,520 g,,Frozen Foods,Yes,,1
+CPG-0520,Red Baron Classic Crust,,622 g,11.99,Frozen Foods,Yes,,1
+CPG-0521,Patra,,400 g,7.99,Frozen Foods,Yes,,2
+CPG-0522,Malwa,,340 g,7.99,Frozen Foods,Yes,,2
+CPG-0523,Methi Vada,,283 g,7.49,Frozen Foods,Yes,,1
+CPG-0524,Kimchi Style Pork,,500 g,,Frozen Foods,Yes,,1
+CPG-0525,El Monterey Signature,,142 g,2.99,Frozen Foods,Yes,,3
+CPG-0526,Chicken Tikka,,350 g,7.95,Frozen Foods,Yes,,7
+CPG-0527,Dal Express Chicken Drumsticks,,675 g,14.99,Frozen Foods,Yes,,1
+CPG-0528,Jane’s Chicken Nuggets,,700 g,10.99,Frozen Foods,Yes,,1
+CPG-0529,Pad Thai with Veg,,380 g,7.99,Frozen Foods,Yes,,3
+CPG-0530,Patty King International,,1.7 kg,,Frozen Foods,Yes,,2
+CPG-0531,Jamaican Beef Patties,,—,3.99,Frozen Foods,Yes,,36
+CPG-0532,Pizza Pockets Pepperoni,,2.85 kg,3.49,Frozen Foods,Yes,,1
+CPG-0533,Meat for Beef Samosa,,300 g,12.99,Frozen Foods,Yes,,3
+CPG-0534,Bo-Lo Wings Golden,,280 g,5.99,Frozen Foods,Yes,,5
+CPG-0535,Masala Bowl,,—,5.99,Frozen Foods,Yes,,5
+CPG-0536,McCain Hash Browns,,1.3 kg,9.95,Frozen Foods,Yes,,1
+CPG-0537,Tasty Bite Veg Tikka Masala,,—,4.99,Frozen Foods,Yes,,7
+CPG-0538,Verka Desi Home Style Tikki,,520 g,,Frozen Foods,Yes,,7
+CPG-0539,Valley Selectors Stir Fry Mix,,500 g,6.29,Frozen Foods,Yes,,18
+CPG-0540,Gobi Paratha,,500 g,6.29,Frozen Foods,Yes,,6
+CPG-0541,PC Cranberries,,600 g,,Frozen Foods,Yes,,1
+CPG-0542,Great Value Cranberries,,600 g,,Frozen Foods,Yes,,1
+CPG-0543,Green Giant Mixed Veg,,750 g,5.99,Frozen Foods,Yes,,1
+CPG-0544,Green Giant Green Peas,,750 g,4.95,Frozen Foods,Yes,,2
+CPG-0545,No Name Pineapple Chunks,,750 g,3.79,Frozen Foods,Yes,,1
+CPG-0546,Valley String Beans,,312 g,,Frozen Foods,Yes,,2
+CPG-0547,Shredded Okra,,300 g,4.29,Frozen Foods,Yes,,2
+CPG-0548,Surati Karela,,340 g,,Frozen Foods,Yes,,3
+CPG-0549,Surati Karela,,300 g,,Frozen Foods,Yes,,2
+CPG-0550,Lysol Disinfecting Wipes,,80 wipes,,Misc,Yes,,7
+CPG-0551,Wetkins Wipes,,40 ct,,,Yes,,1
+CPG-0552,Medion Makeup Wipes,,4 pk,,,Yes,,21
+CPG-0553,Huggies Natural Care,,56 wipes,,,Yes,,3
+CPG-0554,Huggies Pure,,56 wipes,,,Yes,,2
+CPG-0555,Pampers Wipes,,84 wipes,,,Yes,,3
+CPG-0556,Face Purest,,60 wipes,5.49,,Yes,,3
+CPG-0557,Coleman Insect Repellent,,100 ml,11.99,,Yes,,2
+CPG-0558,DermaGuard Insect Repellent,,100 g,,,Yes,,1
+CPG-0559,Coleman Insect Repellent (Dry),,113 g,,,Yes,,5
+CPG-0560,Mosquito Wrist Band,,—,,,Yes,,1
+CPG-0561,After Bite Gel (Insect),,20 g,,,Yes,,2
+CPG-0562,Luv Fresh Room Spray,,240 g,,,Yes,,11
+CPG-0563,Veya Maison Room Spray,,283 g,,,Yes,,1
+CPG-0564,Febreze Room Spray,,250 g,,,Yes,,11
+CPG-0565,Lifebuoy Liquid Soap,,290 ml,,,Yes,,1
+CPG-0566,Deep Fresh Liquid Soap,,—,,,Yes,,7
+CPG-0567,Sweet Almond Bath Combo Soaps,,3 pcs,,,Yes,,3
+CPG-0568,Lux Bright Images,,80 g,,,Yes,,2
+CPG-0569,Lux Soft Touch,,80 g,,,Yes,,1
+CPG-0570,Lux Magical Spell,,80 g,,,Yes,,2
+CPG-0571,Lux Velvet Touch,,80 g,,,No,,0
+CPG-0572,Pears Transparent Soap,,100 g,,,No,,0
+CPG-0573,HEAD Crew Socks,,3 pairs,,Misc,Yes,,2
+CPG-0574,Thank You Notes,,2,1.50,,Yes,,12
+CPG-0575,Party Favor / Happy BD,,4,1.00,,Yes,,4
+CPG-0576,Party Fun Packets,,—,1.00,,Yes,,3
+CPG-0577,Invitation Cards,,8,,,Yes,,5
+CPG-0578,Greeting Cards – Small,,—,,,No,,0
+CPG-0579,Reebok Jones Socks,,3 pairs,,,Yes,,2
+CPG-0580,Party Bubbles / Happy BD,,6,1.00,,Yes,,19
+CPG-0581,LRG Greeting Cards,,1,3.99,,Yes,,5
+CPG-0582,Portfolio Boxes,,1,1.00,,Yes,,1
+CPG-0583,Baking Cups Foil,,50 pcs,4.29,,Yes,,5
+CPG-0584,Baking Cups,,75 pcs,4.29,,Yes,,3
+CPG-0585,Eid Decor Banner,,3 pcs,4.05,,Yes,,1
+CPG-0586,Mini Envelopes with Happy BD,,2 pcs,1.00,,Yes,,3
+CPG-0587,Crystal Stone Gift,,1 pc,13.99,,Yes,,3
+CPG-0588,Canada Flag Tattoos,,1 pc,1.00,,No,,0
+CPG-0589,Make A Memory – Custom Art,,1 pc,1.00,,Yes,,2
+CPG-0590,Empty Envelopes,,1,1.50,,Yes,,5
+CPG-0591,Wine Gift Bag,,1,3.99,,Yes,,9
+CPG-0592,Plastic Cocktail Forks,,30 pcs,1.79,,Yes,,11
+CPG-0593,Peel and Stick,,2 packs,1.50,,Yes,,1
+CPG-0594,Green Gift Wrap – Stripes,,4,1.00,Misc,Yes,,20
+CPG-0595,Pink Gift Wrap – Stripe Paper,,4,1.00,,Yes,,23
+CPG-0596,Brown Gift Wrap – Sheet Paper,,3,1.00,,Yes,,8
+CPG-0597,Pink Gift Wrap – Sheet Paper,,10,1.99,,Yes,,16
+CPG-0598,Decorative Tissue – Wrap,,20,2.99,,Yes,,5
+CPG-0599,Spiral Gift Box,,13 × 24 × 5,3.29,,Yes,,1
+CPG-0600,5 Sheet Gift Wrap – White Paper,,5,1.00,,Yes,,4
+CPG-0601,White Gift Box,,1,1.99,,Yes,,5
+CPG-0602,Candle Test Boxes,,8 × 3,1.00,,Yes,,34
+CPG-0603,Transparent,,1.36 kg,7.00,Walking Cooler,Yes,,12
+CPG-0604,Fromage,,2 L,5.00,,Yes,,11
+CPG-0605,Fresh Pure D. Crème,,1 L,3.81,,Yes,,4
+CPG-0606,Sunny D,,500 ml,2.86,,Yes,,3
+CPG-0607,Eggs,,18s,6.99,,Yes,,18
+CPG-0608,Armstrong Cheese Shreds,,320 g,11.99,,Yes,,12
+CPG-0609,Armstrong Cheese  Bar,,400 g,10.99,,Yes,,6
+CPG-0610,GV Pizza Mozzarella,,320 g,10.99,,Yes,,3
+CPG-0611,FETA – Two Valleys,,150 g,8.99,,Yes,,2
+CPG-0612,Lactantia Butter,,454 g,10.99,,Yes,,11
+CPG-0613,Earth’s Own Unsweetened,,473 g,5.49,,Yes,,5
+CPG-0614,Armstrong Pizza Mozz.,,610 g,14.99,,Yes,,1
+CPG-0615,Hummus – Original,,850 g,9.99,,Yes,,2
+CPG-0616,Hummus - Spicy,,—,,,Yes,,1
+CPG-0617,Black Diamond P. Prm. Blk,,400 g,10.49,,Yes,,4
+CPG-0618,Kirkland Provolone Slice,,22 pk,8.99,,Yes,,7
+CPG-0619,Compliments Mozz. Slice,,20 pk,9.99,,Yes,,9
+CPG-0620,Black Diamond Thick Dice,,14 pk,9.99,,Yes,,2
+CPG-0621,Black Diamond Thick Dice,,22 pk,8.99,,Yes,,4
+CPG-0622,Lunch Mate,,90 g,4.39,,Yes,,7
+CPG-0623,Kirkland Cream,,—,6.99,,Yes,,2
+CPG-0624,Philadelphia Dip,,227 g,5.99,,Yes,,19
+CPG-0625,Philadelphia Dip Fruits,,227 g,6.99,,Yes,,3
+CPG-0626,Party Ice,,,4.50,,Yes,,15
+CPG-0627,Cup Noodles,,cups,1.50,Walk-in Cooler,Yes,,36
+CPG-0628,Sour Cream 2%,,—,,,Yes,,2
+CPG-0629,Yogurt (brand unclear),,500 g,,,Yes,,2
+CPG-0630,Sour Cream Fat Free,,small,,,No,,0
+CPG-0631,〃 (Old),,425 ml,,,Yes,,2
+CPG-0632,Mini Fruits Drink,,—,6.99,,Yes,,5
+CPG-0633,〃 V8,,156 ml,0.99,,Yes,,18
+CPG-0634,½ & ½ Creamer,,—,,,Yes,,1
+CPG-0635,Glow Mouth Patch,,—,2.99,Vitamins,Yes,,1
+CPG-0636,Burner,,—,,,No,,0
+CPG-0637,Contact Bronzing (tube?),,—,1.99,,No,,0
+CPG-0638,Contact Bronzing  (Big),,—,,,No,,0
+CPG-0639,Slim Vita Liquid,,—,5.99,,Yes,,1
+CPG-0640,Buttermint Worms,,—,3.80,,No,,0
+CPG-0641,Tooth Plastic Covers,,—,3.99,,No,,0
+CPG-0642,Silicone Baking Insulator,,—,,,No,,0
+CPG-0643,Bottle Insulated Infusion Bottle,,—,,,No,,0
+CPG-0644,2-Piece Silicone Tools,,—,,,No,,0
+CPG-0645,Browning Powder,,—,3.99,,Yes,,1
+CPG-0646,Browning Iron Holder,,—,3.99,,Yes,,1
+CPG-0647,2-Piece Silicone,,—,2.99,,No,,0
+CPG-0648,Hinged Containers,,—,7.61,,Yes,,3
+CPG-0649,Hagen-Dazs Bar,,80 ml,4.99,Ice,Yes,,63
+CPG-0650,Drumstick Bar (cone),,80 ml,,Ice / Cream,Yes,,136
+CPG-0651,Häagen-Dazs Sandwich,,80 ml,4.25,,Yes,,26
+CPG-0652,Oreo Sandwich,,125 ml,4.59,,Yes,,21
+CPG-0653,Popsicle Sandwich,,100 ml,1.99,,Yes,,87
+CPG-0654,Frozen Yogurt,,—,1.25,,Yes,,12
+CPG-0655,Polar Popsicle,,65 ml,1.49,,Yes,,3
+CPG-0656,Italian Iced (unclear word),,65 ml,2.25,,Yes,,7
+CPG-0657,Mr. Freeze,,—,1.00,,Yes,,9
+CPG-0658,Polar Stick (unclear),,125 ml,4.29,,Yes,,24
+CPG-0659,Big Mix Nuts,,80 g,4.99,Nuts,Yes,,128
+CPG-0660,Steam Iron,,—,,—,Yes,,13
+CPG-0661,"Headlamp, Striped (unclear)",,2 pcs,,—,Yes,,1
+CPG-0662,Storage Mini Plastic (clear),,—,,—,Yes,,3
+CPG-0663,(Ditto / same as above – unclear),,—,,—,Yes,,3
+CPG-0664,Cutlery Pack,,—,,—,Yes,,3
+CPG-0665,Candle Blue White (unclear),,—,,—,Yes,,1
+CPG-0666,Snack Food Lighter Packs,,—,,—,Yes,,1
+CPG-0667,Aluminum Foil,,—,,—,Yes,,7
+CPG-0668,Wax Paper,,—,,—,Yes,,1
+CPG-0669,Garbage Bags,,—,,—,Yes,,7
+CPG-0670,Permanent Tape,,—,,—,Yes,,5
+CPG-0671,Ziploc Bags (Small),,—,4.99,—,Yes,,24
+CPG-0672,Laundry Soap,,15 kg,,Laundry,Yes,,5
+CPG-0673,Palmolive,,320 ml,,—,Yes,,2
+CPG-0674,Palm Shampoo Plus,,470 ml,,—,Yes,,2
+CPG-0675,Palm Ultra,,650 ml,,—,Yes,,6
+CPG-0676,Palm Soap 2 in 1,,1.3 L,,—,Yes,,2
+CPG-0677,Tide Pods,,840 g,16.99,—,Yes,,5
+CPG-0678,Palm Dishwashing Liquid,,2.64 L,,—,Yes,,8
+CPG-0679,Tide Simply Clean,,1.36 L,4.99,—,Yes,,10
+CPG-0680,Tide Liquid Detergent,,650 ml,,—,Yes,,2
+CPG-0681,Vevia Maison (unclear brand),,1 L,8.99,—,Yes,,5
+CPG-0682,Tide Advanced,,850 ml,11.99,—,Yes,,12
+CPG-0683,Tide Advanced (same item),,2.95 L,11.99,—,Yes,,3
+CPG-0684,Ivory Hand Conditioner,,740 ml,,—,Yes,,2
+CPG-0685,Dawn Ultra Antibacterial,,379 g,6.99,—,Yes,,2
+CPG-0686,Downy Scent Booster,,150 g,,—,Yes,,6
+CPG-0687,Drano Max Gel,,920 ml,,Cleaning Supplies,Yes,,4
+CPG-0688,Liquid Plumr Clog Clean,,502 ml,,Cleaning Supplies,Yes,,1
+CPG-0689,Comet Bleach,,400 g,,Cleaning Supplies,Yes,,2
+CPG-0690,Comet Bleach,,600 g,,Cleaning Supplies,Yes,,3
+CPG-0691,Drano Kitchen,,250 g,8.99,Cleaning Supplies,Yes,,12
+CPG-0692,Lysol Advanced Toilet Bowl,,946 ml,,Cleaning Supplies,Yes,,3
+CPG-0693,CLR Multi-Use,,828 ml,,Cleaning Supplies,Yes,,2
+CPG-0694,No Name Multi Disinfect Spray,,650 ml,,Cleaning Supplies,Yes,,1
+CPG-0695,All Purpose Cleaner,,500 ml,,Cleaning Supplies,Yes,,1
+CPG-0696,Easy-Off Heavy Duty,,400 ml,,Cleaning Supplies,Yes,,1
+CPG-0697,Clorox Mold & Mildew,,709 ml,,Cleaning Supplies,Yes,,4
+CPG-0698,Arm & Hammer So Clean,,3 kg,18.99,Cleaning Supplies,Yes,,1
+CPG-0699,Double Cleaning Vinegar,,2.5 L,,Cleaning Supplies,Yes,,3
+CPG-0700,North Bright Bleach,,2.4 L,,Cleaning Supplies,Yes,,2
+CPG-0701,No Name Bleach,,2.4 L,,Cleaning Supplies,Yes,,3
+CPG-0702,Windex Original,,630 ml,,Cleaning Supplies,Yes,,2
+CPG-0703,Oxi Clean Mini,,7 ml,,Cleaning Supplies,Yes,,11
+CPG-0704,The Bath Collection Scrub,,1 pc,4.94,Cleaning Supplies,Yes,,3
+CPG-0705,Mr. Clean Magic Eraser,,2 pc,,Cleaning Supplies,Yes,,5
+CPG-0706,Mr. Clean Magic Eraser,,3 pc,,Cleaning Supplies,Yes,,3
+CPG-0707,Carpet Cleaner,,400 ml,4.99,Cleaning Supplies,Yes,,12
+CPG-0708,Cascade Platinum,,126 g,,Cleaning Supplies,Yes,,1
+CPG-0709,Tide Blue Bar,,500 g,,Cleaning Supplies,No,,0
+CPG-0710,Pine-Sol,,825 ml,4.99,Cleaning Supplies,Yes,,3
+CPG-0711,Mr. Clean Magic Eraser,,1 pc,,Cleaning Supplies,Yes,,4
+CPG-0712,Bounce Tumble Sheets,,15 ct,3.99,Cleaning Supplies,Yes,,2
+CPG-0713,Cesar Wet Dog Food,,100 g,2.85,Pet Items,Yes,,82
+CPG-0714,Pedigree Dog Food,,370 g,4.75,Pet Items,Yes,,13
+CPG-0715,Verdant Life Smoked Bone,,2 pack,9.99,Pet Items,Yes,,2
+CPG-0716,Purina Beneful,,1.6 kg,12.99,Pet Items,Yes,,2
+CPG-0717,Milk Bone Dog Biscuits,,900 g,12.99,Pet Items,Yes,,12
+CPG-0718,Ol’ Roy Kibble,,2 kg,14.99,Pet Items,Yes,,3
+CPG-0719,Dog Poop Bags,,—,1.00,Pet Items,Yes,,17
+CPG-0720,Bark & Clean Pet Pads,,5 pads,5.99,Pet Items,Yes,,3
+CPG-0721,Paw Wipes,,6 wipes,4.99,Pet Items,Yes,,2
+CPG-0722,Purina Frosties,,4 kg,11.99,Pet Items,Yes,,3
+CPG-0723,Purina Frosties (Pate),,156 g,1.20,Pet Items,Yes,,14
+CPG-0724,Whiskas Perfect Portions,,375 g,2.00,Pet Items,Yes,,17
+CPG-0725,Purina Fancy Feast,,85 g,2.40,Pet Items,Yes,,11
+CPG-0726,Purina Tidy Cats Litter,,7.0 kg,16.34,Pet Items,Yes,,2
+CPG-0727,Special Kitty Litter,,7 kg,16.34,Pet Items,Yes,,1
+CPG-0728,Hartz Flea & Tick Spray,,290 ml,12.99,Pet Items,Yes,,1
+CPG-0729,Cat Litter Linear Bag,,7 L,1.50,Pet Items,Yes,,3
+CPG-0730,Pedigree Breath Buster,,500 g,9.99,Pet Items,Yes,,1
+CPG-0731,Pedigree Marrow Bone,,650 g,11.99,Pet Items,Yes,,1
+CPG-0732,Paws Nylon Dog Toy,,20 ct,5.99,Pet Items,Yes,,7
+CPG-0733,Poop Bag Dispenser,,2 pc,4.99,Pet Items,Yes,,2
+CPG-0734,Nescafé Satine,,18 × 19 g,12.29,Coffee & Tea,Yes,,8
+CPG-0735,Nescafé Rich,,170 g,13.99,Coffee & Tea,Yes,,1
+CPG-0736,Nescafé Intense,,160 g,13.99,Coffee & Tea,Yes,,3
+CPG-0737,Nescafé Rich Flavour,,400 g,12.99,Coffee & Tea,Yes,,8
+CPG-0738,Nescafé Rich,,95 g,8.99,Coffee & Tea,Yes,,4
+CPG-0739,Nescafé Gold Espresso,,270 g,14.99,Coffee & Tea,Yes,,1
+CPG-0740,Nescafé Taster’s Choice,,100 g,12.99,Coffee & Tea,Yes,,2
+CPG-0741,Nescafé 2 + 1,,10 × 45 g,5.99,Coffee & Tea,Yes,,2
+CPG-0742,Senso Turmeric Latte,,220 g,11.99,Coffee & Tea,Yes,,3
+CPG-0743,Keurig Our Finest Coffee,,1.1 kg,14.89,Coffee & Tea,Yes,,4
+CPG-0744,Starbucks Coffee,,340 g,18.99,Coffee & Tea,Yes,,4
+CPG-0745,Starbucks Coffee,,311 g,12.99,Coffee & Tea,Yes,,10
+CPG-0746,Starbucks Hot Chocolate,,10 × 28 g,16.49,Coffee & Tea,Yes,,2
+CPG-0747,Tetley Tea – Green Tea,,40 g,5.70,Coffee & Tea,Yes,,6
+CPG-0748,Tetley Chai,,40 g,5.70,Coffee & Tea,Yes,,6
+CPG-0749,Twinings,,40 g,8.99,Coffee & Tea,Yes,,2
+CPG-0750,Tea India,,—,3.99,Coffee & Tea,Yes,,3
+CPG-0751,Premium Tea – Wahh Barakat,,907 g,18.99,Coffee & Tea,Yes,,3
+CPG-0752,Sunrize Coffee Whitener,,260 g,3.49,Coffee & Tea,Yes,,4
+CPG-0753,Coffee-Mate,,425 g,8.56,Coffee & Tea,Yes,,1
+CPG-0754,Coffee-Mate,,450 g,11.51,Coffee & Tea,Yes,,2
+CPG-0755,Coffee Creamer – No Name,,2 L,5.29,Coffee & Tea,Yes,,4
+CPG-0756,Coffee Creamer – No Name,,2 L,5.95,Coffee & Tea,Yes,,1
+CPG-0757,Coffee Filter – Melitta,,10–12 cups,4.99,Coffee & Tea,Yes,,5
+CPG-0758,Great Value Coffee Filters,,8–12 cups,6.99,Coffee & Tea,Yes,,1
+CPG-0759,Anchor Powder Milk,,400g,27.99,Coffee & Tea,Yes,,1
+CPG-0760,Stevia Tea,,40g,7.99,Coffee & Tea,Yes,,2
+CPG-0761,Zabiha Halal Chicken Wieners,,450 g,8.99,Frozen Foods,Yes,,3
+CPG-0762,Chicken Bologna,,375 g,,Frozen Foods,Yes,,2
+CPG-0763,Sun-Fri Breaded Halal Veg,,300 g,,Frozen Foods,Yes,,3
+CPG-0764,Schneider’s Classic Bacon,,375 g,9.99,Frozen Foods,Yes,,3
+CPG-0765,Chicken Curry Cut,,550 g,,Frozen Foods,Yes,,3
+CPG-0766,Cavendish Classic Fries,,750 g,9.99,Frozen Foods,Yes,,2
+CPG-0767,McCain Potato Patties,,400 g,7.99,Frozen Foods,Yes,,2
+CPG-0768,McCain Straight Cut Fries,,800 g,6.99,Frozen Foods,Yes,,1
+CPG-0769,Ice Cream Cones (Hannah Das),,~450 ml,,Ice Cream,Yes,,40
+CPG-0770,Del Monte Bars,,10 × 60 ml,12.99,Ice Cream,Yes,,7
+CPG-0771,Häagen-Dazs Bars,,3 × 88 ml,11.99,Ice Cream,Yes,,11
+CPG-0772,Magnum Bars (Foils),,3 × 120 ml,11.99,Ice Cream,Yes,,4
+CPG-0773,Rolled Cones,,4 × 135 ml,,Ice Cream,Yes,,3
+CPG-0774,Outshine Creamy Ice Cream Bars,,1.5 L,10.99,Ice Cream,Yes,,7
+CPG-0775,Outshine Bars,,5.8 fl oz,11.99,Ice Cream,Yes,,3
+CPG-0776,KitKat Ice Cream Tub,,1.5 L,10.99,Ice Cream,Yes,,2
+CPG-0777,KitKat Bars,,4 × 100 ml,11.99,Ice Cream,Yes,,1
+CPG-0778,Magnum Double Caramel,,—,11.99,Ice Cream,Yes,,3
+CPG-0779,SNO Trip Learning,,3 × 90,13.99,,Yes,,3
+CPG-0780,Parlor Minis,,12 × 63,11.99,,Yes,,1
+CPG-0781,Parlor Minis ice cream tub,,1.5 L,8.99,Ice Cream,Yes,,4
+CPG-0782,Magnum White Choc Bar,,3 × 90,11.99,Ice Cream,Yes,,3
+CPG-0783,Yukon Bars,,,11.99,Ice Cream,Yes,,3
+CPG-0784,Parking Tape – Brown,,—,4.00,Stationery,Yes,,44
+CPG-0785,Parking Tape – Yellow,,—,4.00,Stationery,No,,0
+CPG-0786,Foam Remover (Spray Can),,—,13.99,Stationery,Yes,,1
+CPG-0787,Durex Brush Tape,,—,8.59,Stationery,Yes,,1
+CPG-0788,Sta-Z-Art Markers,,—,,Stationery,Yes,,2
+CPG-0789,Antimicrobial Markers,,—,,Stationery,Yes,,1
+CPG-0790,Jot Markers,,—,,Stationery,Yes,,1
+CPG-0791,12-Pack Graphite Pencils,,—,,Stationery,Yes,,3
+CPG-0792,Crayola Super Points,,—,,Stationery,Yes,,3
+CPG-0793,Correction Tape,,—,3.99,Stationery,Yes,,1
+CPG-0794,Jot 4-Roll Pens,,—,,Stationery,Yes,,1
+CPG-0795,Promarx 4-Pack Pens,,—,,Stationery,Yes,,1
+CPG-0796,Promarx Ball Pens,,—,,Stationery,Yes,,1
+CPG-0797,Permanent Markers,,—,3.99,Stationery,Yes,,4
+CPG-0798,Color Factory Brush Markers,,—,5.99,Stationery,Yes,,2
+CPG-0799,Lead Pencil – 5 Pack,,—,6.99,Stationery,Yes,,1
+CPG-0800,Sabli,,100 g,5.89,Stationery,Yes,,1
+CPG-0801,Mounting Tape – Double Sided,,—,4.29,Stationery,Yes,,7
+CPG-0802,Sharpener,,—,,Stationery,Yes,,3
+CPG-0803,Brand Pen Binder,,—,3.99,Stationery,Yes,,2
+CPG-0804,Binder Glue,,—,2.99,Stationery,Yes,,3
+CPG-0805,UHU White Glue,,—,7.99,Stationery,Yes,,5
+CPG-0806,Crayola Glue,,—,4.99,Stationery,Yes,,2
+CPG-0807,Play Skool 36 crayons,,—,6.99,Stationery,Yes,,1
+CPG-0808,Neon Marking – 6 Pack,,—,,Stationery,Yes,,2
+CPG-0809,Jot 8 Permanent Markers,,—,,Stationery,Yes,,2
+CPG-0810,Luminous 6 pc Candles,,—,6.99,Stationery,Yes,,3
+CPG-0811,Book to Color,,—,,Stationery,Yes,,5
+CPG-0812,Washable Glue Sticks,,—,9.99,Stationery,Yes,,1
+CPG-0813,Crafting Glue Sticks,,—,,Stationery,Yes,,2
+CPG-0814,Modelling Dough,,—,5.99,Stationery,Yes,,2
+CPG-0815,Foam Boards,,—,2.99,Stationery,No,,0
+CPG-0816,Redman Sketch Book,,—,4.99,Stationery,Yes,,4
+CPG-0817,Paints Plastic,,—,2.99,Stationery,Yes,,1
+CPG-0818,Bubble Envelopes – 2 pc,,—,3.99,Stationery,Yes,,11
+CPG-0819,Bubble Envelopes – 1 pc,,—,4.99,Stationery,Yes,,2
+CPG-0820,Umbrella,,—,9.99,Stationery,Yes,,9
+CPG-0821,Paint Roller,,—,3.99,Stationery,Yes,,2
+CPG-0822,8 Foam Paint Brushes,,—,4.99,Stationery,Yes,,1
+CPG-0823,Product Brushers,,—,,Stationery,Yes,,5
+CPG-0824,4 Paint Roller Small,,—,4.99,Stationery,Yes,,4
+CPG-0825,Rack Extension,,—,99.00,Stationery,Yes,,2
+CPG-0826,Foam Roller with Tray,,—,5.70,Stationery,Yes,,1
+CPG-0827,Paint Roller Frame,,—,4.29,Stationery,Yes,,2
+CPG-0828,Rain Poncho,,—,,Stationery,Yes,,10
+CPG-0829,Booster Cable,,—,18.99,Hardware,Yes,,1
+CPG-0830,Plunger,,—,,Hardware,Yes,,2
+CPG-0831,Multimark Heavy Marker,,—,,Hardware,Yes,,1
+CPG-0832,Light Reflex Lens,,—,9.99,Hardware,Yes,,2
+CPG-0833,Armor All Tire Foam,,—,12.00,Hardware,Yes,,2
+CPG-0834,Kleen-Flo Gas Line Antifreeze,,150 ml,2.99,Hardware,Yes,,4
+CPG-0835,Instant Wax Polish,,—,5.00,Hardware,Yes,,2
+CPG-0836,STP Engine Treatment,,—,12.99,Hardware,Yes,,1
+CPG-0837,Kleen-Flo Power Steering,,—,6.99,Hardware,Yes,,1
+CPG-0838,No Name Charcoal Starter,,—,,Hardware,Yes,,1
+CPG-0839,Lighter and Stove Cleaner,,—,8.56,Hardware,Yes,,1
+CPG-0840,STP Brake Fluid,,—,5.79,Hardware,Yes,,1
+CPG-0841,The Original Fix-A-Flat,,—,19.04,Hardware,Yes,,1
+CPG-0842,Easy-Off Heavy Duty Cleaner,,—,4.79,Hardware,Yes,,2
+CPG-0843,Penetrating Oil Lubricant,,—,8.09,Hardware,Yes,,2
+CPG-0844,Easy-Off Grill Cleaner,,—,,Hardware,Yes,,2
+CPG-0845,Car Funnel,,—,,Hardware,Yes,,1
+CPG-0846,Rain-X Glass Cleaner,,—,12.24,Hardware,Yes,,1
+CPG-0847,NS Ceiling Hooks,,—,2.49,Hardware,Yes,,2
+CPG-0848,CM Drill & Wall Plug,,—,7.50,Hardware,Yes,,5
+CPG-0849,Safety Gloves,,—,,Hardware,Yes,,2
+CPG-0850,Foam Plug,,—,,Hardware,Yes,,1
+CPG-0851,CM Plastic Anchors,,—,4.25,Hardware,Yes,,6
+CPG-0852,6 Pc Masonry Drill Bits,,—,3.99,Hardware,Yes,,1
+CPG-0853,Putty Knife,,—,4.75,Hardware,Yes,,1
+CPG-0854,Big Putty Knife,,—,5.99,Hardware,Yes,,1
+CPG-0855,10 Pc Paper Plates,,—,5.99,Hardware,Yes,,3
+CPG-0856,25 Pc Paper Plates,,—,9.99,Hardware,Yes,,3
+CPG-0857,6 Round Aluminium Bowls,,—,3.99,Hardware,Yes,,1
+CPG-0858,LED Bulbs (100) – 2 Pc,,—,,Hardware,Yes,,1
+CPG-0859,LED Bulbs (75) – 2 Pc,,—,,Hardware,Yes,,2
+CPG-0860,LED Bulb,,—,,Hardware,Yes,,1
+CPG-0861,Wall Mount,,—,,Hardware,Yes,,1
+CPG-0862,Philips 4 Pack,,—,,Hardware,Yes,,1
+CPG-0863,Potato Scrubber,,—,7.58,Hardware,Yes,,1
+CPG-0864,zilla multi tool,,—,14.99,Hardware,Yes,,1
+CPG-0865,spring nails - 5 set,,—,4.29,Hardware,Yes,,1
+CPG-0866,Hex starter nails,,—,4.24,Hardware,Yes,,5
+CPG-0867,3-pc teret set,,—,,Hardware,Yes,,3
+CPG-0868,Metric hex key set,,—,6.66,Hardware,Yes,,4
+CPG-0869,Scratch awl,,—,4.49,Hardware,Yes,,1
+CPG-0870,NS 7-step pliers,,—,4.99,Hardware,Yes,,2
+CPG-0871,chateau felt pratechams,,—,,Hardware,No,,0
+CPG-0872,Tire gauge round,,—,2.99,Hardware,Yes,,1
+CPG-0873,95-pc Felt protection,,—,9.59,Hardware,Yes,,1
+CPG-0874,Parko Joint pliers,,—,12.99,Hardware,Yes,,1
+CPG-0875,Finder hole puncher,,—,19.99,Hardware,Yes,,1
+CPG-0876,Ultra steel wrench set,,—,18.99,Hardware,Yes,,1
+CPG-0877,Duramax utility scissors,,—,5.99,Hardware,Yes,,1
+CPG-0878,Utility knife,,—,5.99,Hardware,Yes,,4
+CPG-0879,Flat head screwdriver,,—,9.97,Hardware,Yes,,2
+CPG-0880,Windshield washer,,—,15.99,Hardware,Yes,,1
+CPG-0881,Wall mount night light,,—,3.99,Hardware,Yes,,1
+CPG-0882,Night light,,—,4.99,Hardware,Yes,,1
+CPG-0883,Engine flush oil,,—,3.99,Hardware,Yes,,7
+CPG-0884,Tool roll towel,,—,1.99,Hardware,Yes,,9
+CPG-0885,Lemon lubricant,,—,4.52,Hardware,Yes,,1
+CPG-0886,Egress maintenance,,—,,Hardware,No,,0
+CPG-0887,NW-6 Bathroom Tissues,,242 sheets / roll,6.99,Grocery,Yes,,11
+CPG-0888,Bounty Plus – Single Roll,,"91, 2-ply",4.75,Grocery,No,,0
+CPG-0889,Kirkland Paper Towel – Single Roll,,"160, 2-ply",4.49,Grocery,No,,0
+CPG-0890,Vicks Puffs Facial Tissue,,"48, 2-ply",5.89,Grocery,Yes,,2
+CPG-0891,NE – Washing Bag (Large),,30 × 40 cm,4.99,Grocery,Yes,,6
+CPG-0892,Airwick Essential Oil Diffuser Refill,,15 days,5.99,Grocery,Yes,,5
+CPG-0893,Franko Blue Toilet Bowl Cleaner,,—,1.99,Grocery,Yes,,11
+CPG-0894,Terry 4-in-1 Toilet Bowl Cleaner,,4-in-1 stick,8.99,Grocery,Yes,,4
+CPG-0895,Airwick 360 Fragrance,,aerosol / canister,5.99,Grocery,Yes,,6
+CPG-0896,Tesa Fly Magnet,,4 pack,6.99,Grocery,Yes,,2
+CPG-0897,Rapid Fly Ribbon,,4 pack,6.99,Grocery,Yes,,2
+CPG-0898,Green Killer Fly Catch Trap,,4 pack,6.99,Grocery,Yes,,9
+CPG-0899,Face Mask,,1 piece,1.99,Grocery,Yes,,3
+CPG-0900,Scrubber (Single),,1 piece,2.99,Grocery,Yes,,2
+CPG-0901,8-Pc Kitchen Scourers,,8 piece,4.99,Grocery,Yes,,10
+CPG-0902,Scotties Premium,,2-ply,2.86,Grocery,No,,0
+CPG-0903,White Swan Toilet Paper,,Single roll,1.90,Grocery,Yes,,32
+CPG-0904,Royal 3-Ply Toilet Paper,,12 pack,15.99,Grocery,No,,0
+CPG-0905,Royal 2-Ply Toilet Paper,,12 pack,13.32,Grocery,Yes,,4
+CPG-0906,Oneida Glass Cups,,Single,3.29,Grocery,Yes,,4
+CPG-0907,25-Pc Peg Locks,,25 pcs,2.99,Grocery,Yes,,3
+CPG-0908,Plastic Anchors,,30 pcs,3.99,Grocery,Yes,,4
+CPG-0909,Video Wire Clips,,50 pcs,3.99,Grocery,Yes,,3
+CPG-0910,Bamboo Trivet,,17 cm × 17 cm,3.99,Grocery,Yes,,3
+CPG-0911,General Purpose Hooks – White,,16 pack,4.29,Grocery,Yes,,4
+CPG-0912,Command Hooks – Adhesive Hooks,,4 pc,3.99,Grocery,Yes,,8
+CPG-0913,Suction Cup Hooks,,"4 cm, 6 pc",4.05,Grocery,Yes,,4
+CPG-0914,Iron-On Patches – Tailor Form,,5″ × 5″,3.49,Grocery,Yes,,3
+CPG-0915,Catchmaster – Mouse Trap,,1 box,4.49,Grocery,Yes,,1
+CPG-0916,Fix-It Basin Stopper,,1 unit,9.99,Grocery,Yes,,1
+CPG-0917,Dead End Glue Traps,,4 traps,3.89,Grocery,Yes,,14
+CPG-0918,Shoe Laces,,2 pc,2.99,Grocery,Yes,,33
+CPG-0919,Over-the-Door / Screw-On Grommet,,4 pc,6.67,Grocery,Yes,,1
+CPG-0920,Elastic,,1½″ × 8¼″,3.29,Grocery,Yes,,2
+CPG-0921,Shower Caps,,6 pcs,3.99,Grocery,Yes,,12
+CPG-0922,Cable Ties,,75 pcs,3.80,Grocery,Yes,,19
+CPG-0923,Hangers,,5 pc,9.99,Grocery,Yes,,5
+CPG-0924,Kleen Glo (Multipurpose Wipes),,6 pcs,3.99,Grocery,Yes,,1
+CPG-0925,Spring Holder,,9 pcs,3.99,Grocery,Yes,,1
+CPG-0926,Kleen Glo Latex Gloves,,Pair,3.99,Grocery,Yes,,28
+CPG-0927,St. Nick’s Choice – Tree Mat,,1 pc,9.99,Grocery,Yes,,1
+CPG-0928,Great Value Wet & Dry Mop Kit,,1 kit,17.99,Grocery,Yes,,1
+CPG-0929,Magic Mop Refill,,1 pc,3.99,Grocery,Yes,,2
+CPG-0930,Pre-Med Face Shield,,1 pc,4.99,Grocery,Yes,,2
+CPG-0931,Shower Curtain Liner (Clear),,approx. 70″ × 72″,7.99,Grocery,Yes,,1
+CPG-0932,Supervalue Hand – Disposable Towels,,—,3.49,—,Yes,,5
+CPG-0933,Kirkland Signature Napkins,,260 pc,5.99,—,Yes,,1
+CPG-0934,S-Mart Vinyl Shower Curtain Liner,,—,4.99,—,Yes,,1
+CPG-0935,Viva Towel – Cleaning Roll,,1 roll,12.97,—,Yes,,8
+CPG-0936,Palm Paper – Table Cover,,—,2.99,—,Yes,,2
+CPG-0937,Duster Stick,,—,6.49,—,Yes,,1
+CPG-0938,Shower Curtain Liner (Soft Touch),,70″ × 70″,7.99,—,Yes,,1
+CPG-0939,Purple Bedsheet Set,,140 × 200 cm,20.00,—,Yes,,1
+CPG-0940,Plastic Cups (Golden Dot),,1 box,20.00,—,Yes,,1
+CPG-0941,Large Glass (Clear),,—,1.99,—,Yes,,2
+CPG-0942,Small Glass (Clear),,—,2.00,—,Yes,,4
+CPG-0943,Paper Bowl – Purple & White,,—,1.99,—,Yes,,2
+CPG-0944,Loo Fresh – Fresh Rose Air,,250 ml,5.99,—,Yes,,5
+CPG-0945,Glade Solid Air Freshener – Vent,,2 boxes,7.99,—,Yes,,2
+CPG-0946,Lacson’s Essential Oil Reed Diffuser,,1 bottle,4.99,—,Yes,,2
+CPG-0947,Trash bags – small,,—,3.99,—,Yes,,1
+CPG-0948,Trash bag – 30,,—,7.99,—,Yes,,1
+CPG-0949,Metal cloth hanger,,—,7.99,—,Yes,,2
+CPG-0950,Ice tray – plastic,,—,3.99,—,Yes,,1
+CPG-0951,Sofa cover,,—,6.50,—,Yes,,2
+CPG-0952,Mio – Energy,,48 ml,5.49,Misc,Yes,,85
+CPG-0953,Shwr – Energy,,57 ml,5.49,Misc,Yes,,20
+CPG-0954,Hand Gel,,60 ml,5.00,Misc,Yes,,6
+CPG-0955,Pocket Tissue,,Small,1.00,Misc,Yes,,5
+CPG-0956,Chupa Chups,,Big,1.50,Misc,Yes,,18
+CPG-0957,Chupa Chups,,Small,0.50,Misc,Yes,,15
+CPG-0958,Nail Clipper,,—,2.38,Misc,Yes,,53
+CPG-0959,Chap-Lip / Lip Balm,,—,2.38,Misc,Yes,,39
+CPG-0960,Energy Vitamin-C,,1000 mg,1.50,Misc,Yes,,19
+CPG-0961,Sour Candy – Toxic,,48 g,2.99,Misc,No,,0
+CPG-0962,Bobos Candy,,37 g,1.00,Misc,No,,0
+CPG-0963,Jolly Rancher Lollipop,,17 g,0.99,Misc,Yes,,45
+CPG-0964,Kinder Joy Egg,,20 g,1.99,Misc,Yes,,22
+CPG-0965,Sunglasses Chain,,Mix,5.00,Misc,Yes,,29
+CPG-0966,Scent Bomb,,30 ml,5.99,Misc,Yes,,7
+CPG-0967,Fav Key Mini Chain,,30 g,1.75,Misc,Yes,,45
+CPG-0968,Chew + V,,38 g,1.10,Misc,Yes,,16
+CPG-0969,Royal LED Torch,,—,4.99,Misc,Yes,,11
+CPG-0970,Laundry Tie Mounted,,—,39.99,Misc,Yes,,2
+CPG-0971,Formulation Lotion,,—,24.99,Misc,Yes,,1
+CPG-0972,Royal Honey,,20 g,14.00,Misc,Yes,,8
+CPG-0973,Juicy Honey,,20 g,20.00,Misc,Yes,,7
+CPG-0974,Rind & Sex Plus,,—,19.99,Misc,Yes,,17
+CPG-0975,PC Spring water,,,4.99,Drink,Yes,,9
+CPG-0976,water,,,9.99,Drink,Yes,,7
+CPG-0977,Mr. freeze,,,,Drink,Yes,,9
+CPG-0978,Crush Freeze,,,,Drink,Yes,,2
+CPG-0979,Scissors,,—,,Misc,Yes,,4
+CPG-0980,Nuts & Bolts,,—,4.05,Misc,Yes,,1
+CPG-0981,Lighter Stand,,—,5.70,Misc,Yes,,2
+CPG-0982,GFCI Outlet Cover,,—,2.99,Misc,Yes,,6
+CPG-0983,Metal Tongs,,—,4.29,Misc,Yes,,2
+CPG-0984,25 Paper Straws,,—,2.99,Misc,Yes,,8
+CPG-0985,Cooking Tongs,,—,,Misc,Yes,,1
+CPG-0986,Spatula Utensil Set,,—,8.99,Misc,Yes,,3
+CPG-0987,"20"" Grill Fish",,—,2.49,Misc,Yes,,1
+CPG-0988,BBQ Tongs,,—,6.99,Misc,Yes,,1
+CPG-0989,Gas Lighter,,—,3.99,Misc,Yes,,4
+CPG-0990,Flat Meat Flipper,,—,4.49,Misc,Yes,,2
+CPG-0991,Strainer,,—,,Misc,Yes,,2
+CPG-0992,Wire Skimmer,,—,,Misc,Yes,,1
+CPG-0993,Table Napkin Holder,,—,,Misc,Yes,,3
+CPG-0994,Butter Knives,,—,2.99,Misc,Yes,,3
+CPG-0995,Slotted Skimmer,,—,3.49,Misc,Yes,,1
+CPG-0996,Splatter Screen,,—,3.29,Misc,Yes,,1
+CPG-0997,Turkey Baster,,—,3.99,Misc,Yes,,2
+CPG-0998,Bamboo Skewers,,—,1.99,Misc,Yes,,5
+CPG-0999,Chopping Board,,—,5.99,Misc,Yes,,1
+CPG-1000,Vacuum Flask Set,,—,,Misc,Yes,,3
+CPG-1001,Wood Kindling,,—,,Misc,Yes,,1
+CPG-1002,Bottle & Mug,,—,19.99,,Yes,,1
+CPG-1003,Reusable Napkins,,—,2.19,,Yes,,8
+CPG-1004,Mini Towel,,—,2.99,,Yes,,2
+CPG-1005,Sippy Cups,,—,5.99,,Yes,,2
+CPG-1006,Party Kit Cups,,473 ml,5.99,,Yes,,2
+CPG-1007,Green Red Cups,,145 ml,3.99,,Yes,,7
+CPG-1008,Glow Stick Party Kit,,—,2.99,,Yes,,1
+CPG-1009,Sip Cup Bottle,,—,3.99,,Yes,,3
+CPG-1010,Milk Frother,,—,5.99,,Yes,,1
+CPG-1011,Lemon Squeezer,,—,6.99,,Yes,,1
+CPG-1012,Casserole,,—,15.99,,Yes,,1
+CPG-1013,Sauté Pan,,—,15.99,,Yes,,1
+CPG-1014,Pancake Pan,,—,8.99,,Yes,,1
+CPG-1015,Silver Measuring Bowl,,—,6.09,,Yes,,2
+CPG-1016,Measuring Cup,,—,4.75,,Yes,,2
+CPG-1017,Measuring Cup (Small),,—,4.75,,Yes,,1
+CPG-1018,Ceramic Bowl & Dish,,—,5.29,,Yes,,1
+CPG-1019,Ceramic Dish,,—,4.79,,Yes,,1
+CPG-1020,Twist Wine Glass,,—,3.99,,Yes,,1
+CPG-1021,Lunch Box,,—,19.99,,Yes,,1
+CPG-1022,Toaster,,—,29.99,,Yes,,1
+CPG-1023,Capri Wine Glass,,—,29.99,,Yes,,1
+CPG-1024,Liboy Craft brew set,,—,19.99,,Yes,,1
+CPG-1025,Big Bracelets,,—,21.99,Display,Yes,,38
+CPG-1026,Necklaces,,—,19.99,Display,Yes,,11
+CPG-1027,Watch Belt Set,,—,39.99,Display,Yes,,1
+CPG-1028,Belts,,—,19.99,Display,Yes,,4
+CPG-1029,Stacking Set – Small,,—,9.99,Display,Yes,,2
+CPG-1030,Manicure Set,,—,24.99,Display,Yes,,1
+CPG-1031,Stacking Set – Black/Gold,,—,14.99,Display,Yes,,1
+CPG-1032,Perfumes,,—,24.99,Display,Yes,,5
+CPG-1033,Hair Bands,,—,5.99,Display,Yes,,10
+CPG-1034,Battery Operated Powder Box,,—,19.99,Display,Yes,,2
+CPG-1035,Small Powder Box,,—,24.99,Display,Yes,,5
+CPG-1036,Bed Set,,—,15.99,Display,Yes,,15
+CPG-1037,Tray Big,,—,9.99,Display,Yes,,1
+CPG-1038,Tray Small noted,,—,7.99,Display,Yes,,2
+CPG-1039,Brown Purse,,—,24.99,Display,Yes,,1
+CPG-1040,Small Wallet,,—,2.99,Display,Yes,,5
+CPG-1041,Jewellery Lunch Bag,,—,9.99,Display,Yes,,5
+CPG-1042,Emergency Blanket,,—,6.99,Display,Yes,,10
+CPG-1043,UNO Cards Case,,—,9.99,Display,Yes,,1
+CPG-1044,Wine Rack,,,14.99,,Yes,,1
+CPG-1045,Citrus Squeezer,,,4.99,,Yes,,2
+CPG-1046,Lemon Bowl / Squeezer,,,6.99,,Yes,,1
+CPG-1047,Skewers (Metal/Bamboo),,,2.99,,Yes,,5
+CPG-1048,Backyard Grill (Small),,,39.99,,Yes,,1
+CPG-1049,Portable Gas Handle,,,9.99,,Yes,,1
+CPG-1050,BBQ Spatula,,,6.99,,Yes,,2
+CPG-1051,Tongs,,,5.99,,Yes,,2
+CPG-1052,Grilling Skewers (Set),,,7.99,,Yes,,2
+CPG-1053,“For Sale” Board (Sign),,,9.99,,Yes,,1
+CPG-1054,“We Are Open” Board,,,9.99,,Yes,,1
+CPG-1055,Nag Pancha,,,2.99,Incense,Yes,,89
+CPG-1056,Glasses Premium,,,19.99,,Yes,,17
+CPG-1057,Nubel Glasses,,,19.99,,Yes,,11

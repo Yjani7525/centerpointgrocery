@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CenterPoint Grocery | Product Catalog</title>
+  <meta name="description" content="CenterPoint Grocery product catalog. Browse groceries, snacks, beverages, and essentials." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div>
+      <h1>CenterPoint Grocery</h1>
+      <p class="muted">Live product catalog — browse what we currently carry.</p>
+    </div>
+    <nav class="nav">
+      <a href="products.html">Browse Products</a>
+      <a href="product-sheet.html">Product Sheet</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card hero">
+      <div>
+        <h2>Storefront Catalog (Online)</h2>
+        <p class="muted">This site is designed to be linked directly from your Google Business Profile so customers can view products and availability.</p>
+        <div class="kpi" id="kpis"></div>
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="products.html">Open Catalog</a>
+          <a class="btn" href="product-sheet.html">Open Product Sheet</a>
+          <a class="btn" href="products.csv" download>Download CSV</a>
+        </div>
+        <p class="muted small" id="updated"></p>
+      </div>
+      <div class="tile card">
+        <h2>Store Info</h2>
+        <p><strong>Address:</strong> 101 14 Ave SE, Calgary, AB T2G 1C6</p>
+        <p><strong>Phone:</strong> (403) 232-6777</p>
+        <p class="muted small">Tip: If you want “Specials” or “New Arrivals,” tell me and I’ll add a dedicated section you can update via the same CSV.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How to keep this updated</h2>
+      <ul class="muted">
+        <li>Update <strong>products.csv</strong> in your GitHub repo (edit online or upload the new file).</li>
+        <li>Your site updates automatically for customers (no extra steps).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted">
+    © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    async function loadCSV(url){
+      const res = await fetch(url, {cache: "no-store"});
+      const text = await res.text();
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(",").map(h => h.trim());
+      const rows = lines.slice(1).map(line => {
+        const cols = line.split(",").map(c => c.trim());
+        const obj = {};
+        headers.forEach((h,i)=>obj[h]=cols[i] ?? "");
+        return obj;
+      });
+      return rows;
+    }
+
+    (async () => {
+      const rows = await loadCSV("products.csv");
+      const total = rows.length;
+      const inStock = rows.filter(r => (r.in_stock || "").toLowerCase() === "yes").length;
+      const categories = [...new Set(rows.map(r => r.category).filter(Boolean))].length;
+
+      const kpis = document.getElementById("kpis");
+      kpis.innerHTML = `
+        <div class="tile"><div class="muted small">Total products</div><div style="font-size:22px;font-weight:700">${total}</div></div>
+        <div class="tile"><div class="muted small">In-stock items</div><div style="font-size:22px;font-weight:700">${inStock}</div></div>
+        <div class="tile"><div class="muted small">Departments</div><div style="font-size:22px;font-weight:700">${categories}</div></div>
+      `;
+
+      const updated = document.getElementById("updated");
+      updated.textContent = "Catalog data source: products.csv (update anytime in GitHub).";
+    })();
+  </script>
+</body>
+</html>
