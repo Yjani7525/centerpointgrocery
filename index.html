@@ -3,49 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CenterPoint Grocery | Product Catalog</title>
-  <meta name="description" content="CenterPoint Grocery product catalog. Browse groceries, snacks, beverages, and essentials." />
+  <title>CenterPoint Grocery | Products & Offers</title>
+  <meta name="description" content="CenterPoint Grocery product catalog and weekly offers." />
   <link rel="stylesheet" href="styles.css" />
+
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <header class="wrap header">
-    <div>
+    <div class="brand">
       <h1>CenterPoint Grocery</h1>
-      <p class="muted">Live product catalog — browse what we currently carry.</p>
+      <p>Groceries • Snacks • Beverages • Daily Essentials</p>
     </div>
     <nav class="nav">
-      <a href="products.html">Browse Products</a>
-      <a href="product-sheet.html">Product Sheet</a>
+      <a href="products.html">Browse Inventory</a>
+      <a href="offers.html">Offers</a>
+      <a href="#info">Store Info</a>
     </nav>
   </header>
 
   <main class="wrap">
-    <section class="card hero">
-      <div>
-        <h2>Storefront Catalog (Online)</h2>
-        <p class="muted">This site is designed to be linked directly from your Google Business Profile so customers can view products and availability.</p>
-        <div class="kpi" id="kpis"></div>
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn" href="products.html">Open Catalog</a>
-          <a class="btn" href="product-sheet.html">Open Product Sheet</a>
-          <a class="btn" href="products.csv" download>Download CSV</a>
+    <section class="hero">
+      <div class="card banner">
+        <img src="assets/storefront.jpg" alt="CenterPoint Grocery storefront" />
+        <div class="overlay"></div>
+        <div class="content">
+          <h2>Your neighbourhood convenience store</h2>
+          <p>Search inventory fast, check current offers, and find what you need before you drive over.</p>
+          <div class="btnrow">
+            <a class="btn primary" href="products.html">Browse Inventory</a>
+            <a class="btn" href="offers.html">View Offers</a>
+          </div>
+          <div class="searchbar">
+            <input id="homeSearch" type="search" placeholder="Search inventory (e.g., milk, butter, dairy)..." />
+            <a class="btn" id="goSearch" href="products.html">Search</a>
+          </div>
+          <p class="muted small">Note: public catalog hides prices. Offers show deal pricing only.</p>
         </div>
-        <p class="muted small" id="updated"></p>
       </div>
-      <div class="tile card">
-        <h2>Store Info</h2>
-        <p><strong>Address:</strong> 101 14 Ave SE, Calgary, AB T2G 1C6</p>
-        <p><strong>Phone:</strong> (403) 232-6777</p>
-        <p class="muted small">Tip: If you want “Specials” or “New Arrivals,” tell me and I’ll add a dedicated section you can update via the same CSV.</p>
+
+      <div class="card">
+        <h2 class="notice">Quick categories</h2>
+        <p class="muted small">Tap a category to jump into the inventory list.</p>
+        <div class="grid" id="cats"></div>
+
+        <div class="kv">
+          <div class="mini" id="kpi1"></div>
+          <div class="mini" id="kpi2"></div>
+        </div>
       </div>
     </section>
 
     <section class="card">
-      <h2>How to keep this updated</h2>
-      <ul class="muted">
-        <li>Update <strong>products.csv</strong> in your GitHub repo (edit online or upload the new file).</li>
-        <li>Your site updates automatically for customers (no extra steps).</li>
-      </ul>
+      <h2>Featured sections</h2>
+      <div class="grid">
+        <div class="tile card">
+          <img src="assets/dairy_fridge.jpg" alt="Dairy section" />
+          <div class="label">Dairy</div>
+          <div class="muted small">Milk, cream, butter, yogurt & more.</div>
+          <div class="btnrow"><a class="btn" href="products.html?cat=Dairy">Browse Dairy</a></div>
+        </div>
+        <div class="tile card">
+          <img src="assets/drinks_fridge.jpg" alt="Beverages section" />
+          <div class="label">Beverages</div>
+          <div class="muted small">Cold drinks, energy, juices, water.</div>
+          <div class="btnrow"><a class="btn" href="products.html?cat=Beverages">Browse Beverages</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="info">
+      <h2>Store info</h2>
+      <p><strong>Address:</strong> 101 14 Ave SE, Calgary, AB T2G 1C6</p>
+      <p><strong>Phone:</strong> (403) 232-6777</p>
+      <div class="btnrow">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=101+14+Ave+SE+Calgary+AB+T2G+1C6" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn" href="tel:+14032326777">Call Store</a>
+      </div>
+      <p class="muted small">Inventory and offers are updated regularly. If you need confirmation on time-sensitive items, call the store.</p>
     </section>
   </main>
 
@@ -53,38 +88,32 @@
     © <span id="y"></span> CenterPoint Grocery
   </footer>
 
+  <script src="shared.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    async function loadCSV(url){
-      const res = await fetch(url, {cache: "no-store"});
-      const text = await res.text();
-      const lines = text.trim().split(/\r?\n/);
-      const headers = lines[0].split(",").map(h => h.trim());
-      const rows = lines.slice(1).map(line => {
-        const cols = line.split(",").map(c => c.trim());
-        const obj = {};
-        headers.forEach((h,i)=>obj[h]=cols[i] ?? "");
-        return obj;
-      });
-      return rows;
+    const searchInput = document.getElementById("homeSearch");
+    const go = document.getElementById("goSearch");
+    function updateLink(){
+      const q = (searchInput.value || "").trim();
+      go.href = q ? `products.html?q=${encodeURIComponent(q)}` : "products.html";
     }
+    searchInput.addEventListener("input", updateLink);
+    updateLink();
 
     (async () => {
-      const rows = await loadCSV("products.csv");
+      const rows = await loadCSV("products_public.csv");
       const total = rows.length;
+      const cats = [...new Set(rows.map(r => r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
       const inStock = rows.filter(r => (r.in_stock || "").toLowerCase() === "yes").length;
-      const categories = [...new Set(rows.map(r => r.category).filter(Boolean))].length;
 
-      const kpis = document.getElementById("kpis");
-      kpis.innerHTML = `
-        <div class="tile"><div class="muted small">Total products</div><div style="font-size:22px;font-weight:700">${total}</div></div>
-        <div class="tile"><div class="muted small">In-stock items</div><div style="font-size:22px;font-weight:700">${inStock}</div></div>
-        <div class="tile"><div class="muted small">Departments</div><div style="font-size:22px;font-weight:700">${categories}</div></div>
-      `;
+      document.getElementById("kpi1").innerHTML = `<div class="muted small">Items listed</div><div style="font-size:22px;font-weight:800">${total.toLocaleString()}</div>`;
+      document.getElementById("kpi2").innerHTML = `<div class="muted small">In-stock items</div><div style="font-size:22px;font-weight:800">${inStock.toLocaleString()}</div>`;
 
-      const updated = document.getElementById("updated");
-      updated.textContent = "Catalog data source: products.csv (update anytime in GitHub).";
+      const catsEl = document.getElementById("cats");
+      catsEl.innerHTML = cats.slice(0,8).map(c => `
+        <a class="btn" href="products.html?cat=${encodeURIComponent(c)}">${c}</a>
+      `).join("");
     })();
   </script>
 </body>

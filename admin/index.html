@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin | CenterPoint Grocery</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <h1>Admin</h1>
+      <p>Owner controls + staff access.</p>
+    </div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/offers.html">Offers</a>
+      <a href="/staff/">Staff Lookup</a>
+      <a href="#" id="logout">Log out</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Admin access</h2>
+      <p class="muted small">This page requires an <strong>admin</strong> account.</p>
+      <div class="btnrow">
+        <a class="btn primary" href="/staff/">Open Staff Lookup</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add / manage staff credentials</h2>
+      <p class="muted small">
+        In Netlify, go to <strong>Site settings → Identity → Users</strong> and click <strong>Invite users</strong>.
+        Create individual staff accounts (recommended). Assign roles:
+      </p>
+      <ul class="muted small">
+        <li><strong>staff</strong> → can use Staff Lookup</li>
+        <li><strong>admin</strong> → can access this Admin page + Staff Lookup</li>
+      </ul>
+      <p class="muted small">Operational control: if an employee leaves, disable their user instantly.</p>
+    </section>
+
+    <section class="card">
+      <h2>Update inventory + offers (current workflow)</h2>
+      <p class="muted small">
+        Inventory and offers are currently stored in your GitHub repo. Best practice is to migrate to Google Sheets or a small admin CMS so staff can update without touching GitHub.
+      </p>
+      <ul class="muted small">
+        <li><strong>Inventory (private):</strong> <code>/private/products_private.csv</code></li>
+        <li><strong>Inventory (public):</strong> <code>/products_public.csv</code> (no price/qty)</li>
+        <li><strong>Offers:</strong> <code>/offers.csv</code></li>
+      </ul>
+      <p class="muted small">If you want “edit-in-browser” inventory management, tell me “inventory admin next”.</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted">
+    Admin portal • © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script src="/auth.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      if(!requireLogin(["admin"])) return;
+      document.getElementById("logout").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.netlifyIdentity && window.netlifyIdentity.logout();
+      });
+    });
+  </script>
+</body>
+</html>

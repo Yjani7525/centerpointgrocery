@@ -1,0 +1,3 @@
+/admin/*  /admin/index.html  200!  Role=admin
+/staff/*  /staff/index.html  200!  Role=staff,admin
+/private/*  /private/:splat  200!  Role=staff,admin

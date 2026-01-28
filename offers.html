@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offers | CenterPoint Grocery</title>
+  <meta name="description" content="Current offers and bundles at CenterPoint Grocery." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <h1>Offers</h1>
+      <p>Deals & bundles (in-store only).</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Inventory</a>
+      <a href="admin.html">Owner Login</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Current offers</h2>
+      <p class="muted small">Offers are time-limited and while supplies last. For confirmation, call the store.</p>
+    </section>
+
+    <section id="offers" class="grid"></section>
+
+    <section class="card">
+      <h2>Want to request an offer?</h2>
+      <p class="muted small">Call the store or ask in person. We regularly rotate offers based on demand.</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted">
+    © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script src="shared.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    (async () => {
+      const rows = await loadCSV("offers.csv");
+      const active = rows.filter(r => (r.active || "").toLowerCase() === "yes");
+      const host = document.getElementById("offers");
+
+      if(active.length === 0){
+        host.innerHTML = `<div class="card"><p class="muted">No offers published right now. Check back soon.</p></div>`;
+        return;
+      }
+
+      host.innerHTML = active.map(o => `
+        <div class="card tile">
+          ${o.image ? `<img src="${o.image}" alt="Offer image" />` : ``}
+          <div class="label">${o.title || ""}</div>
+          <div class="muted small">${o.details || ""}</div>
+          ${(o.start_date || o.end_date) ? `<div class="muted small">Valid: ${o.start_date || ""} ${o.end_date ? "– " + o.end_date : ""}</div>` : ``}
+        </div>
+      `).join("");
+    })();
+  </script>
+</body>
+</html>

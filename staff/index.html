@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Staff Lookup | CenterPoint Grocery</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <h1>Staff Lookup</h1>
+      <p>Search items, view price + quantity.</p>
+    </div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/products.html">Public Inventory</a>
+      <a href="#" id="logout">Log out</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Search</h2>
+      <div class="searchbar">
+        <input id="q" type="search" placeholder="Search (milk, butter, coke, etc.)" autofocus />
+        <select id="cat"><option value="">All departments</option></select>
+        <label class="badge"><input id="instock" type="checkbox" style="transform:scale(1.1)" /> <span>In stock only</span></label>
+        <span class="muted small" id="count"></span>
+      </div>
+      <p class="muted small">If this page prompts for login, use your staff account. Tablet stays logged in unless you log out.</p>
+    </section>
+
+    <section class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Dept</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Stock</th>
+            <th>SKU</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted">
+    Staff portal • © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script src="/shared.js"></script>
+  <script src="/auth.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // force login and role
+    window.addEventListener("load", async () => {
+      if(!requireLogin(["staff","admin"])) return;
+
+      const user = currentUser();
+      document.getElementById("logout").addEventListener("click", (e) => {
+        e.preventDefault();
+        window.netlifyIdentity && window.netlifyIdentity.logout();
+      });
+
+      const all = await loadCSV("/private/products_private.csv");
+      const cats = [...new Set(all.map(r => r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+      const catSel = document.getElementById("cat");
+      cats.forEach(c => { const o=document.createElement("option"); o.value=c; o.textContent=c; catSel.appendChild(o); });
+
+      const q = document.getElementById("q");
+      const instock = document.getElementById("instock");
+      const count = document.getElementById("count");
+      const tbody = document.getElementById("rows");
+
+      function render(list){
+        count.textContent = `${list.length.toLocaleString()} items shown`;
+        tbody.innerHTML = list.map(r => {
+          const inStock = (r.in_stock || "").toLowerCase() === "yes";
+          return `
+            <tr>
+              <td style="font-weight:700">${r.name || ""}</td>
+              <td class="muted">${r.category || ""}</td>
+              <td class="muted">${r.size || ""}</td>
+              <td style="font-weight:800">$${Number(r.price||0).toFixed(2)}</td>
+              <td style="font-weight:800">${r.qty || ""}</td>
+              <td><span class="badge"><span class="${inStock ? "dot" : "dot off"}"></span> ${inStock ? "In stock" : "Out"}</span></td>
+              <td class="muted">${r.sku || ""}</td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      function apply(){
+        const term=(q.value||"").toLowerCase().trim();
+        const cat=catSel.value;
+        const onlyStock=instock.checked;
+        let rows=all;
+        if(cat) rows=rows.filter(r => r.category === cat);
+        if(onlyStock) rows=rows.filter(r => (r.in_stock||"").toLowerCase()==="yes");
+        if(term){
+          rows=rows.filter(r => (`${r.sku} ${r.name} ${r.size} ${r.category}`.toLowerCase().includes(term)));
+        }
+        render(rows);
+      }
+
+      q.addEventListener("input", apply);
+      catSel.addEventListener("change", apply);
+      instock.addEventListener("change", apply);
+      apply();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Owner Login | CenterPoint Grocery</title>
+  <meta name="description" content="Owner view for CenterPoint Grocery (local session only)." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div class="brand">
+      <h1>Owner Login</h1>
+      <p>Owner-only view toggles price display (local browser session).</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Inventory</a>
+      <a href="offers.html">Offers</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Important security note</h2>
+      <p class="muted small">
+        This site is hosted on GitHub Pages (static hosting). A true secure login + admin panel requires a backend (e.g., Netlify Identity, Firebase, or a small server).
+        This page only controls whether prices are shown in <em>your browser</em>. It does NOT protect data from someone technical.
+      </p>
+      <p class="muted small">If you want a real secure owner portal to add offers and manage prices, say “secure admin” and I’ll migrate you to a proper setup.</p>
+    </section>
+
+    <section class="card">
+      <h2>Owner toggle</h2>
+      <div class="searchbar">
+        <input id="pw" type="password" placeholder="Enter owner passcode" />
+        <button class="btn primary" id="login">Unlock owner view</button>
+        <button class="btn" id="logout">Lock</button>
+      </div>
+      <p class="muted small" id="status"></p>
+      <div class="btnrow">
+        <a class="btn" href="products.html">Go to Inventory</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How to update offers (current method)</h2>
+      <p class="muted small">Edit <strong>offers.csv</strong> in GitHub and commit changes. Offers page updates automatically.</p>
+      <p class="muted small">Column rules:</p>
+      <ul class="muted small">
+        <li><strong>active</strong>: Yes/No</li>
+        <li><strong>title</strong>: offer headline</li>
+        <li><strong>details</strong>: short description</li>
+        <li><strong>image</strong>: optional, e.g., assets/drinks_fridge.jpg</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap footer muted">
+    © <span id="y"></span> CenterPoint Grocery
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const status = document.getElementById("status");
+
+    function setStatus(){
+      status.textContent = (localStorage.getItem("cpg_owner_unlocked")==="1")
+        ? "Owner view is ON for this browser."
+        : "Owner view is OFF.";
+    }
+    setStatus();
+
+    // Minimal passcode check (client-side). Change this string after first deploy.
+    const PASSCODE = "CPG-OWNER-2026";
+
+    document.getElementById("login").addEventListener("click", () => {
+      const v = document.getElementById("pw").value || "";
+      if(v === PASSCODE){
+        localStorage.setItem("cpg_owner_unlocked","1");
+        setStatus();
+        alert("Owner view enabled. Prices will show on the Inventory page for this browser.");
+      } else {
+        alert("Incorrect passcode.");
+      }
+    });
+
+    document.getElementById("logout").addEventListener("click", () => {
+      localStorage.removeItem("cpg_owner_unlocked");
+      setStatus();
+      alert("Owner view disabled.");
+    });
+  </script>
+</body>
+</html>

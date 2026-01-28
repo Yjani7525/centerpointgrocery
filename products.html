@@ -3,61 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products | CenterPoint Grocery</title>
-  <meta name="description" content="Browse CenterPoint Grocery products. Search and filter by department." />
+  <title>Inventory | CenterPoint Grocery</title>
+  <meta name="description" content="Browse CenterPoint Grocery inventory. Search by product and department." />
   <link rel="stylesheet" href="styles.css" />
+
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <header class="wrap header">
-    <div>
-      <h1>Products</h1>
-      <p class="muted">Search, filter, and view availability.</p>
+    <div class="brand">
+      <h1>Inventory</h1>
+      <p>Search + filter what’s in store.</p>
     </div>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="product-sheet.html">Product Sheet</a>
-      <a href="products.csv" download>Download CSV</a>
+      <a href="offers.html">Offers</a>
+      <a href="admin.html">Owner Login</a>
     </nav>
   </header>
 
   <main class="wrap">
-    <section class="controls card">
-      <input id="q" type="search" placeholder="Search product, SKU, size, department…" />
+    <section class="card searchbar">
+      <input id="q" type="search" placeholder="Search (e.g., milk, butter, dairy)..." />
       <select id="cat"><option value="">All departments</option></select>
-      <label class="checkbox"><input id="instock" type="checkbox" /> In stock only</label>
+      <label class="badge"><input id="instock" type="checkbox" style="transform:scale(1.1)" /> <span>In stock only</span></label>
       <span class="muted small" id="count"></span>
     </section>
 
     <section id="grid" class="grid"></section>
-    <p class="muted small" id="note">Prices and availability can change — call the store for confirmation on time-sensitive items.</p>
+
+    <section class="card">
+      <h2>Pricing note</h2>
+      <p class="muted small">Public catalog intentionally hides individual item prices. Deals and bundles are shown on the <a href="offers.html">Offers</a> page.</p>
+    </section>
   </main>
 
   <footer class="wrap footer muted">
     © <span id="y"></span> CenterPoint Grocery
   </footer>
 
+  <script src="shared.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    async function loadCSV(url){
-      const res = await fetch(url, {cache: "no-store"});
-      const text = await res.text();
-      const lines = text.trim().split(/\r?\n/);
-      const headers = lines[0].split(",").map(h => h.trim());
-      const rows = lines.slice(1).map(line => {
-        const cols = line.split(",").map(c => c.trim());
-        const obj = {};
-        headers.forEach((h,i)=>obj[h]=cols[i] ?? "");
-        return obj;
-      });
-      return rows;
-    }
+    function unique(arr){ return [...new Set(arr)].sort((a,b)=>a.localeCompare(b)); }
 
-    function money(v){
-      if(!v) return "";
-      const n = Number(v);
-      if(Number.isNaN(n)) return v;
-      return "$" + n.toFixed(2);
+    // Owner view toggle (client-side). This is NOT secure, it only hides in the UI.
+    function ownerUnlocked(){
+      return localStorage.getItem("cpg_owner_unlocked") === "1";
     }
 
     function render(rows){
@@ -69,15 +62,15 @@
         const inStock = (r.in_stock || "").toLowerCase() === "yes";
         const dotClass = inStock ? "dot" : "dot off";
         const stockText = inStock ? "In stock" : "Out of stock";
-        const price = money(r.price);
         const size = r.size ? ` • ${r.size}` : "";
-        const cat = r.category ? `<div class="muted small">${r.category}</div>` : "";
+        const dept = r.category ? `<div class="muted small">${r.category}</div>` : "";
+        const price = ownerUnlocked() ? `<div style="font-weight:800">$${Number(r.price||0).toFixed(2)}</div>` : "";
         return `
-          <div class="card product">
-            ${cat}
-            <div style="display:flex;justify-content:space-between;gap:10px">
-              <div style="font-weight:700">${r.name || ""}</div>
-              <div style="font-weight:700">${price}</div>
+          <div class="card">
+            ${dept}
+            <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+              <div style="font-weight:800">${r.name || ""}</div>
+              ${price}
             </div>
             <div class="muted small">${r.sku || ""}${size}</div>
             <div class="badge"><span class="${dotClass}"></span> ${stockText}</div>
@@ -86,22 +79,25 @@
       }).join("");
     }
 
-    function unique(arr){ return [...new Set(arr)].sort((a,b)=>a.localeCompare(b)); }
-
     (async () => {
-      const all = await loadCSV("products.csv");
+      const all = await loadCSV("products_public.csv");
 
-      // populate categories
-      const cats = unique(all.map(r => r.category).filter(Boolean));
+      // controls
+      const q = document.getElementById("q");
       const catSel = document.getElementById("cat");
+      const instock = document.getElementById("instock");
+
+      // preset from querystring
+      q.value = qsParam("q");
+      const presetCat = qsParam("cat");
+
+      const cats = unique(all.map(r => r.category).filter(Boolean));
       cats.forEach(c => {
         const opt = document.createElement("option");
         opt.value = c; opt.textContent = c;
         catSel.appendChild(opt);
       });
-
-      const q = document.getElementById("q");
-      const instock = document.getElementById("instock");
+      if(presetCat){ catSel.value = presetCat; }
 
       function apply(){
         const term = (q.value || "").toLowerCase().trim();
@@ -109,17 +105,14 @@
         const onlyStock = instock.checked;
 
         let rows = all;
-
         if(cat) rows = rows.filter(r => r.category === cat);
         if(onlyStock) rows = rows.filter(r => (r.in_stock || "").toLowerCase() === "yes");
-
         if(term){
           rows = rows.filter(r => {
             const blob = `${r.sku} ${r.name} ${r.size} ${r.category}`.toLowerCase();
             return blob.includes(term);
           });
         }
-
         render(rows);
       }
 
