@@ -3,118 +3,356 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CenterPoint Grocery | Products & Offers</title>
-  <meta name="description" content="CenterPoint Grocery product catalog and weekly offers." />
-  <link rel="stylesheet" href="styles.css" />
 
-  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>Centre Point Grocery | Calgary Convenience Store</title>
+  <meta name="description" content="Centre Point Grocery in Calgary. Browse our inventory, view current offers, and find groceries, snacks, beverages, hot food and everyday essentials." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; }
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(2,44,34,.94) 0%, rgba(4,120,87,.82) 44%, rgba(2,44,34,.28) 100%);
+    }
+
+    .glass {
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .offer-shine {
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,.22), transparent 35%),
+        linear-gradient(135deg, #047857, #059669 60%, #0f766e);
+    }
+
+    .search-shadow { box-shadow: 0 16px 45px rgba(6, 78, 59, .14); }
+
+    .card-lift { transition: transform .2s ease, box-shadow .2s ease; }
+    .card-lift:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(15,23,42,.10); }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 999px; }
+  </style>
 </head>
-<body>
-  <header class="wrap header">
-    <div class="brand">
-      <h1>CenterPoint Grocery</h1>
-      <p>Groceries • Snacks • Beverages • Daily Essentials</p>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- Header -->
+  <nav class="sticky top-0 z-50 border-b border-slate-200 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-5">
+      <a href="index.html" class="flex items-center min-w-max" aria-label="Centre Point Grocery home">
+        <div class="w-11 h-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center mr-3 shadow-sm">
+          <i class="fa-solid fa-store text-xl"></i>
+        </div>
+        <div>
+          <div class="font-extrabold text-xl leading-none">Centre Point</div>
+          <div class="text-xs font-bold tracking-[.2em] text-emerald-700 mt-1">GROCERY</div>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex flex-1 max-w-xl">
+        <form class="w-full relative" onsubmit="searchInventory(event, 'desktop-search')">
+          <input id="desktop-search" type="search"
+            class="w-full rounded-full border border-slate-200 bg-slate-100 px-5 py-3 pr-12 outline-none focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
+            placeholder="Search inventory: milk, Coke, bread, dairy..." />
+          <button type="submit" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-emerald-700" aria-label="Search inventory">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="hidden md:flex items-center gap-2">
+        <a href="products.html" class="px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-100">Inventory</a>
+        <a href="offers.html" class="px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-100">Offers</a>
+        <a href="#services" class="px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-100">Services</a>
+        <a href="https://maps.google.com/?q=101+14+Ave+SE,+Calgary,+AB" target="_blank"
+           class="px-4 py-2 rounded-full font-bold bg-emerald-600 text-white hover:bg-emerald-700">
+          Directions
+        </a>
+      </div>
+
+      <button class="md:hidden text-2xl text-slate-700" onclick="toggleMenu()" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
-    <nav class="nav">
-      <a href="products.html">Browse Inventory</a>
-      <a href="offers.html">Offers</a>
-      <a href="#info">Store Info</a>
-    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-4">
+      <form class="relative mb-3" onsubmit="searchInventory(event, 'mobile-search')">
+        <input id="mobile-search" type="search"
+          class="w-full rounded-full border border-slate-200 bg-slate-100 px-4 py-3 pr-12 outline-none focus:border-emerald-500"
+          placeholder="Search inventory..." />
+        <button type="submit" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500" aria-label="Search inventory">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="products.html" class="rounded-xl bg-slate-100 px-4 py-3 font-semibold">Inventory</a>
+        <a href="offers.html" class="rounded-xl bg-emerald-50 text-emerald-800 px-4 py-3 font-semibold">Offers</a>
+        <a href="#fresh-ready" onclick="toggleMenu()" class="rounded-xl bg-slate-100 px-4 py-3 font-semibold">Fresh & Ready</a>
+        <a href="#services" onclick="toggleMenu()" class="rounded-xl bg-slate-100 px-4 py-3 font-semibold">Services</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative min-h-[570px] flex items-center overflow-hidden">
+    <img src="assets/storefront.jpg" alt="Centre Point Grocery storefront in Calgary"
+         class="absolute inset-0 w-full h-full object-cover object-center" />
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+      <div class="max-w-2xl text-white">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-bold mb-6 backdrop-blur">
+          <span class="w-2 h-2 rounded-full bg-emerald-300"></span>
+          OPEN 7 DAYS A WEEK
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
+          Your neighbourhood store, right in downtown Calgary.
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-emerald-50 max-w-xl">
+          Everyday groceries, cold drinks, snacks, hot food, household essentials and convenient in-store services.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="products.html"
+             class="bg-white text-emerald-800 px-7 py-3.5 rounded-full font-extrabold shadow-lg hover:bg-emerald-50">
+            <i class="fa-solid fa-basket-shopping mr-2"></i> Browse Inventory
+          </a>
+          <a href="offers.html"
+             class="bg-emerald-500/80 border border-emerald-300 text-white px-7 py-3.5 rounded-full font-extrabold hover:bg-emerald-500">
+            <i class="fa-solid fa-tags mr-2"></i> Current Offers
+          </a>
+        </div>
+
+        <form onsubmit="searchInventory(event, 'hero-search')" class="mt-8 max-w-xl bg-white rounded-2xl p-2 flex search-shadow">
+          <input id="hero-search" type="search" placeholder="What are you looking for?"
+                 class="flex-1 min-w-0 px-4 py-3 text-slate-800 outline-none rounded-xl" />
+          <button type="submit" class="bg-emerald-600 text-white font-bold px-5 sm:px-7 rounded-xl hover:bg-emerald-700">
+            Search
+          </button>
+        </form>
+
+        <div class="mt-3 flex flex-wrap gap-2 text-sm text-emerald-50">
+          <span>Popular:</span>
+          <button onclick="quickSearch('milk')" class="underline hover:text-white">Milk</button>
+          <button onclick="quickSearch('coke')" class="underline hover:text-white">Coke</button>
+          <button onclick="quickSearch('bread')" class="underline hover:text-white">Bread</button>
+          <button onclick="quickSearch('dairy')" class="underline hover:text-white">Dairy</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="card banner">
-        <img src="assets/storefront.jpg" alt="CenterPoint Grocery storefront" />
-        <div class="overlay"></div>
-        <div class="content">
-          <h2>Your neighbourhood convenience store</h2>
-          <p>Search inventory fast, check current offers, and find what you need before you drive over.</p>
-          <div class="btnrow">
-            <a class="btn primary" href="products.html">Browse Inventory</a>
-            <a class="btn" href="offers.html">View Offers</a>
+  <!-- Offer CTA -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+    <a href="offers.html" class="offer-shine block rounded-2xl p-6 sm:p-8 text-white shadow-xl card-lift">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+        <div>
+          <div class="text-emerald-100 text-sm uppercase tracking-widest font-bold">In-store specials</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Check our current offers before you visit</h2>
+          <p class="text-emerald-50 mt-2">Deals and bundles are updated regularly and available while supplies last.</p>
+        </div>
+        <div class="bg-white text-emerald-800 px-5 py-3 rounded-full font-extrabold min-w-max">
+          View Offers <i class="fa-solid fa-arrow-right ml-2"></i>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Quick categories -->
+  <section class="py-16" id="categories">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <p class="text-emerald-700 font-bold uppercase tracking-widest text-sm">Shop faster</p>
+          <h2 class="text-3xl font-extrabold mt-1">Browse popular categories</h2>
+          <p class="text-slate-500 mt-2">Search the inventory online before coming in.</p>
+        </div>
+        <a href="products.html" class="font-bold text-emerald-700 hover:text-emerald-800">View all inventory →</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="products.html?cat=Grocery" class="relative h-72 overflow-hidden rounded-2xl shadow-sm card-lift group">
+          <img src="assets/dairy.jpg" alt="Everyday grocery and dairy products" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <div class="text-2xl font-extrabold">Everyday Groceries</div>
+            <div class="text-white/80 mt-1">Milk, pantry items, sauces, bread & more</div>
           </div>
-          <div class="searchbar">
-            <input id="homeSearch" type="search" placeholder="Search inventory (e.g., milk, butter, dairy)..." />
-            <a class="btn" id="goSearch" href="products.html">Search</a>
+        </a>
+
+        <a href="products.html?q=beverage" class="relative h-72 overflow-hidden rounded-2xl shadow-sm card-lift group">
+          <img src="assets/drinks.jpg" alt="Cold beverage selection" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <div class="text-2xl font-extrabold">Cold Drinks</div>
+            <div class="text-white/80 mt-1">Pop, energy drinks, water, juice & more</div>
           </div>
-          <p class="muted small">Note: public catalog hides prices. Offers show deal pricing only.</p>
+        </a>
+
+        <a href="products.html?q=snack" class="relative h-72 overflow-hidden rounded-2xl shadow-sm card-lift group bg-slate-900">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-400 via-orange-500 to-red-600"></div>
+          <div class="absolute inset-0 opacity-15 flex items-center justify-center">
+            <i class="fa-solid fa-cookie-bite text-[150px] text-white"></i>
+          </div>
+          <div class="absolute bottom-0 p-6 text-white">
+            <div class="text-2xl font-extrabold">Snacks & Treats</div>
+            <div class="text-white/85 mt-1">Chips, candy, chocolate, ice cream & more</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fresh & Ready -->
+  <section id="fresh-ready" class="py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-emerald-700 font-bold uppercase tracking-widest text-sm">Grab & go</p>
+        <h2 class="text-3xl font-extrabold mt-1">Fresh & Ready</h2>
+        <p class="mt-3 text-slate-500">Quick snacks and cold treats when you need something now.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-orange-100 bg-orange-50 p-7 card-lift">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h3 class="text-xl font-extrabold">Hot Samosas</h3>
+          <p class="text-slate-600 mt-2">Crispy, savoury and ready to grab on the go.</p>
+        </div>
+
+        <div class="rounded-2xl border border-blue-100 bg-blue-50 p-7 card-lift">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <h3 class="text-xl font-extrabold">Ice Cold Slushies</h3>
+          <p class="text-slate-600 mt-2">Multiple flavours for a quick cold refreshment.</p>
+        </div>
+
+        <div class="rounded-2xl border border-pink-100 bg-pink-50 p-7 card-lift">
+          <div class="w-14 h-14 rounded-2xl bg-pink-500 text-white flex items-center justify-center text-2xl mb-5">
+            <i class="fa-solid fa-ice-cream"></i>
+          </div>
+          <h3 class="text-xl font-extrabold">Milkshakes</h3>
+          <p class="text-slate-600 mt-2">Creamy favourites including Oreo, Mango, Peach and Vanilla.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-emerald-700 font-bold uppercase tracking-widest text-sm">More than groceries</p>
+        <h2 class="text-3xl font-extrabold mt-1">In-store services</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 card-lift">
+          <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+          </div>
+          <h3 class="font-extrabold text-xl">Luggage Storage</h3>
+          <p class="mt-2 text-slate-600">Convenient baggage drop-off and daily storage for travellers.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs font-bold text-slate-600">
+            <span class="rounded-full bg-slate-100 px-3 py-1">Bounce</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1">Stasher</span>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 card-lift">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-print"></i>
+          </div>
+          <h3 class="font-extrabold text-xl">Document Printing</h3>
+          <p class="mt-2 text-slate-600">Black & white, colour and double-sided printing available in-store.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 card-lift">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center text-xl mb-5">
+            <i class="fa-solid fa-box"></i>
+          </div>
+          <h3 class="font-extrabold text-xl">Moving Supplies</h3>
+          <p class="mt-2 text-slate-600">U-Haul boxes and moving supplies available for packing and moving needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location / Contact -->
+  <section class="py-16 bg-emerald-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-10">
+      <div>
+        <div class="text-emerald-300 font-bold uppercase tracking-widest text-sm">Visit us</div>
+        <h2 class="text-3xl font-extrabold mt-2">Centre Point Grocery</h2>
+        <p class="text-emerald-100 mt-4">101 14 Ave SE<br>Calgary, AB T2G 1C6</p>
+        <a href="tel:4032326777" class="inline-flex items-center mt-5 text-white font-bold hover:text-emerald-200">
+          <i class="fa-solid fa-phone mr-2"></i> (403) 232-6777
+        </a>
+        <div class="mt-6">
+          <a href="https://maps.google.com/?q=101+14+Ave+SE,+Calgary,+AB" target="_blank"
+             class="inline-block bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-extrabold px-5 py-3 rounded-xl">
+            Get Directions
+          </a>
         </div>
       </div>
 
-      <div class="card">
-        <h2 class="notice">Quick categories</h2>
-        <p class="muted small">Tap a category to jump into the inventory list.</p>
-        <div class="grid" id="cats"></div>
-
-        <div class="kv">
-          <div class="mini" id="kpi1"></div>
-          <div class="mini" id="kpi2"></div>
+      <div>
+        <h3 class="font-extrabold text-lg mb-4">Hours</h3>
+        <div class="space-y-2 text-emerald-100">
+          <div class="flex justify-between gap-4"><span>Mon–Fri</span><span>7:30 AM – 10:00 PM</span></div>
+          <div class="flex justify-between gap-4"><span>Saturday</span><span>7:30 AM – 9:30 PM</span></div>
+          <div class="flex justify-between gap-4"><span>Sunday</span><span>8:30 AM – 9:30 PM</span></div>
         </div>
       </div>
-    </section>
 
-    <section class="card">
-      <h2>Featured sections</h2>
-      <div class="grid">
-        <div class="tile card">
-          <img src="assets/dairy_fridge.jpg" alt="Dairy section" />
-          <div class="label">Dairy</div>
-          <div class="muted small">Milk, cream, butter, yogurt & more.</div>
-          <div class="btnrow"><a class="btn" href="products.html?cat=Dairy">Browse Dairy</a></div>
-        </div>
-        <div class="tile card">
-          <img src="assets/drinks_fridge.jpg" alt="Beverages section" />
-          <div class="label">Beverages</div>
-          <div class="muted small">Cold drinks, energy, juices, water.</div>
-          <div class="btnrow"><a class="btn" href="products.html?cat=Beverages">Browse Beverages</a></div>
+      <div>
+        <h3 class="font-extrabold text-lg mb-4">Quick links</h3>
+        <div class="grid grid-cols-1 gap-2 text-emerald-100">
+          <a href="products.html" class="hover:text-white">Browse Inventory</a>
+          <a href="offers.html" class="hover:text-white">Current Offers</a>
+          <a href="#fresh-ready" class="hover:text-white">Fresh & Ready</a>
+          <a href="#services" class="hover:text-white">In-store Services</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="card" id="info">
-      <h2>Store info</h2>
-      <p><strong>Address:</strong> 101 14 Ave SE, Calgary, AB T2G 1C6</p>
-      <p><strong>Phone:</strong> (403) 232-6777</p>
-      <div class="btnrow">
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=101+14+Ave+SE+Calgary+AB+T2G+1C6" target="_blank" rel="noopener">Get Directions</a>
-        <a class="btn" href="tel:+14032326777">Call Store</a>
-      </div>
-      <p class="muted small">Inventory and offers are updated regularly. If you need confirmation on time-sensitive items, call the store.</p>
-    </section>
-  </main>
-
-  <footer class="wrap footer muted">
-    © <span id="y"></span> CenterPoint Grocery
+  <footer class="bg-slate-950 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row gap-3 justify-between">
+      <div>© <span id="year"></span> Centre Point Grocery. All rights reserved.</div>
+      <div class="text-sm">Calgary, Alberta</div>
+    </div>
   </footer>
 
-  <script src="shared.js"></script>
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const searchInput = document.getElementById("homeSearch");
-    const go = document.getElementById("goSearch");
-    function updateLink(){
-      const q = (searchInput.value || "").trim();
-      go.href = q ? `products.html?q=${encodeURIComponent(q)}` : "products.html";
+    function toggleMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
     }
-    searchInput.addEventListener("input", updateLink);
-    updateLink();
 
-    (async () => {
-      const rows = await loadCSV("products_public.csv");
-      const total = rows.length;
-      const cats = [...new Set(rows.map(r => r.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
-      const inStock = rows.filter(r => (r.in_stock || "").toLowerCase() === "yes").length;
+    function searchInventory(event, inputId) {
+      event.preventDefault();
+      const query = document.getElementById(inputId).value.trim();
+      if (!query) return;
+      window.location.href = "products.html?q=" + encodeURIComponent(query);
+    }
 
-      document.getElementById("kpi1").innerHTML = `<div class="muted small">Items listed</div><div style="font-size:22px;font-weight:800">${total.toLocaleString()}</div>`;
-      document.getElementById("kpi2").innerHTML = `<div class="muted small">In-stock items</div><div style="font-size:22px;font-weight:800">${inStock.toLocaleString()}</div>`;
-
-      const catsEl = document.getElementById("cats");
-      catsEl.innerHTML = cats.slice(0,8).map(c => `
-        <a class="btn" href="products.html?cat=${encodeURIComponent(c)}">${c}</a>
-      `).join("");
-    })();
+    function quickSearch(query) {
+      window.location.href = "products.html?q=" + encodeURIComponent(query);
+    }
   </script>
 </body>
 </html>
