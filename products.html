@@ -1,1 +1,331 @@
-const all = await loadCSV("products.csv");
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Inventory | Centre Point Grocery</title>
+  <meta name="description" content="Search Centre Point Grocery inventory in Calgary. Browse groceries, snacks, beverages and everyday essentials." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    body { font-family: "Inter", sans-serif; }
+    .glass { background: rgba(255,255,255,.94); backdrop-filter: blur(12px); }
+    .product-card { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .product-card:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(15,23,42,.08); border-color: #a7f3d0; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 999px; }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased min-h-screen">
+
+  <!-- Header -->
+  <nav class="sticky top-0 z-50 border-b border-slate-200 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-5">
+      <a href="index.html" class="flex items-center min-w-max">
+        <div class="w-11 h-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center mr-3 shadow-sm">
+          <i class="fa-solid fa-store text-xl"></i>
+        </div>
+        <div>
+          <div class="font-extrabold text-xl leading-none">Centre Point</div>
+          <div class="text-xs font-bold tracking-[.2em] text-emerald-700 mt-1">GROCERY</div>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-100">Home</a>
+        <a href="offers.html" class="px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-100">Offers</a>
+        <a href="https://maps.google.com/?q=101+14+Ave+SE,+Calgary,+AB" target="_blank"
+           class="px-4 py-2 rounded-full font-bold bg-emerald-600 text-white hover:bg-emerald-700">
+          Directions
+        </a>
+      </div>
+
+      <a href="index.html" class="md:hidden w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-700" aria-label="Back home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Inventory intro -->
+  <header class="bg-gradient-to-br from-emerald-950 via-emerald-800 to-teal-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <div class="max-w-3xl">
+        <div class="text-emerald-200 font-bold uppercase tracking-[.18em] text-sm">Store inventory</div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mt-2">Find what you need before you visit.</h1>
+        <p class="mt-4 text-lg text-emerald-50">
+          Search by product, department, size or SKU. Individual item prices are hidden from the public.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search controls -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section class="-mt-16 bg-white border border-slate-200 shadow-xl rounded-2xl p-4 sm:p-5 relative z-10">
+      <div class="grid lg:grid-cols-[1fr_260px_auto] gap-3 items-center">
+        <div class="relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input id="q" type="search"
+             class="w-full rounded-xl border border-slate-200 bg-slate-50 pl-11 pr-4 py-3.5 outline-none focus:bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100"
+             placeholder="Search milk, Coke, bread, dairy..." autofocus />
+        </div>
+
+        <select id="cat"
+          class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 outline-none focus:bg-white focus:border-emerald-500">
+          <option value="">All departments</option>
+        </select>
+
+        <label class="inline-flex items-center gap-2 whitespace-nowrap bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 cursor-pointer">
+          <input id="instock" type="checkbox" class="w-4 h-4 accent-emerald-600" />
+          <span class="font-semibold text-sm">In stock only</span>
+        </label>
+      </div>
+
+      <div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div id="count" class="text-sm font-semibold text-slate-600">Loading inventory…</div>
+        <div id="owner-note" class="hidden text-sm font-bold text-emerald-700">
+          <i class="fa-solid fa-lock-open mr-1"></i> Owner view is ON — price and quantity are visible.
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8"></section>
+
+    <div id="empty" class="hidden bg-white rounded-2xl border border-slate-200 p-10 text-center mt-8">
+      <div class="w-14 h-14 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-slate-400 text-xl">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <h2 class="text-xl font-extrabold mt-4">No matching products</h2>
+      <p class="text-slate-500 mt-2">Try another product name or choose a different department.</p>
+    </div>
+
+    <div class="text-center mt-8">
+      <button id="load-more" class="hidden bg-slate-900 hover:bg-slate-800 text-white font-bold px-7 py-3 rounded-full">
+        Load more products
+      </button>
+    </div>
+
+    <!-- Availability note -->
+    <section class="mt-10 grid md:grid-cols-2 gap-4">
+      <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-6">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-circle-info text-emerald-600 mt-1"></i>
+          <div>
+            <h2 class="font-extrabold">Availability note</h2>
+            <p class="text-sm text-slate-600 mt-1">
+              Products remain visible even when the inventory file marks them unavailable. Stock changes throughout the day, so call us if you need confirmation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-6">
+        <div class="font-extrabold">Need us to check the shelf?</div>
+        <div class="text-sm text-slate-500 mt-1">Call Centre Point Grocery and we’ll confirm availability.</div>
+        <a href="tel:4032326777" class="inline-flex items-center mt-4 font-extrabold text-emerald-700 hover:text-emerald-800">
+          <i class="fa-solid fa-phone mr-2"></i> (403) 232-6777
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 mt-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 flex flex-col sm:flex-row gap-3 justify-between">
+      <div>© <span id="year"></span> Centre Point Grocery.</div>
+      <div class="flex gap-5 text-sm">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="offers.html" class="hover:text-white">Offers</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    let allProducts = [];
+    let filteredProducts = [];
+    let renderLimit = 60;
+
+    const q = document.getElementById("q");
+    const cat = document.getElementById("cat");
+    const instock = document.getElementById("instock");
+    const grid = document.getElementById("grid");
+    const empty = document.getElementById("empty");
+    const count = document.getElementById("count");
+    const loadMore = document.getElementById("load-more");
+    const ownerNote = document.getElementById("owner-note");
+
+    const ownerUnlocked = () => localStorage.getItem("cpg_owner_unlocked") === "1";
+
+    function safeText(value) {
+      return (value ?? "").toString().trim();
+    }
+
+    function formatMoney(value) {
+      const n = Number(safeText(value));
+      return Number.isFinite(n) && safeText(value) !== "" ? "$" + n.toFixed(2) : "—";
+    }
+
+    function parseQty(value) {
+      const n = Number(safeText(value));
+      return Number.isFinite(n) ? n : null;
+    }
+
+    function isInStock(product) {
+      const explicit = safeText(product.in_stock).toLowerCase();
+      if (explicit === "yes") return true;
+      if (explicit === "no") return false;
+
+      const qty = parseQty(product.qty);
+      return qty !== null ? qty > 0 : true;
+    }
+
+    function populateCategories() {
+      const categories = [...new Set(allProducts.map(p => safeText(p.category)).filter(Boolean))]
+        .sort((a,b) => a.localeCompare(b));
+
+      categories.forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        cat.appendChild(option);
+      });
+
+      const preset = new URLSearchParams(window.location.search).get("cat");
+      if (preset && categories.includes(preset)) cat.value = preset;
+    }
+
+    function applyFilters() {
+      const term = q.value.trim().toLowerCase();
+      const selectedCategory = cat.value;
+      const onlyInStock = instock.checked;
+
+      filteredProducts = allProducts.filter(product => {
+        if (selectedCategory && safeText(product.category) !== selectedCategory) return false;
+        if (onlyInStock && !isInStock(product)) return false;
+
+        if (term) {
+          const haystack = [
+            product.sku,
+            product.name,
+            product.brand,
+            product.size,
+            product.category
+          ].map(safeText).join(" ").toLowerCase();
+
+          if (!haystack.includes(term)) return false;
+        }
+
+        return true;
+      });
+
+      renderLimit = 60;
+      render();
+    }
+
+    function render() {
+      const visible = filteredProducts.slice(0, renderLimit);
+      const owner = ownerUnlocked();
+
+      ownerNote.classList.toggle("hidden", !owner);
+
+      count.textContent =
+        `${filteredProducts.length.toLocaleString()} product${filteredProducts.length === 1 ? "" : "s"} found`;
+
+      empty.classList.toggle("hidden", filteredProducts.length !== 0);
+
+      grid.innerHTML = visible.map(product => {
+        const inStock = isInStock(product);
+        const statusClasses = inStock
+          ? "bg-emerald-50 text-emerald-700 border-emerald-100"
+          : "bg-amber-50 text-amber-700 border-amber-100";
+        const statusText = inStock ? "In stock" : "Check availability";
+
+        const priceBlock = owner
+          ? `<div class="mt-4 grid grid-cols-2 gap-2">
+               <div class="rounded-xl bg-emerald-50 p-3">
+                 <div class="text-[11px] uppercase tracking-wider font-bold text-emerald-700">Price</div>
+                 <div class="text-lg font-extrabold text-slate-900">${formatMoney(product.price)}</div>
+               </div>
+               <div class="rounded-xl bg-sky-50 p-3">
+                 <div class="text-[11px] uppercase tracking-wider font-bold text-sky-700">Qty</div>
+                 <div class="text-lg font-extrabold text-slate-900">${parseQty(product.qty) ?? "—"}</div>
+               </div>
+             </div>`
+          : "";
+
+        return `
+          <article class="product-card bg-white border border-slate-200 rounded-2xl p-5">
+            <div class="flex justify-between items-start gap-3">
+              <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-700">${safeText(product.category) || "General"}</div>
+              <span class="text-xs font-bold border rounded-full px-2.5 py-1 ${statusClasses}">
+                ${statusText}
+              </span>
+            </div>
+
+            <h2 class="text-lg font-extrabold mt-3 leading-snug">${safeText(product.name) || "Unnamed product"}</h2>
+
+            <div class="mt-2 text-sm text-slate-500">
+              ${safeText(product.size) ? `<span>${safeText(product.size)}</span>` : ""}
+              ${safeText(product.sku) ? `<span class="ml-2 text-slate-400">${safeText(product.sku)}</span>` : ""}
+            </div>
+
+            ${priceBlock}
+          </article>
+        `;
+      }).join("");
+
+      const hasMore = filteredProducts.length > renderLimit;
+      loadMore.classList.toggle("hidden", !hasMore);
+    }
+
+    async function loadInventory() {
+      try {
+        const response = await fetch("products.csv", { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        const text = await response.text();
+        const parsed = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+          transformHeader: h => h.trim()
+        });
+
+        allProducts = (parsed.data || []).filter(row => safeText(row.name));
+
+        populateCategories();
+
+        const params = new URLSearchParams(window.location.search);
+        q.value = params.get("q") || "";
+
+        applyFilters();
+      } catch (error) {
+        console.error(error);
+        count.textContent = "Inventory could not be loaded.";
+        empty.classList.remove("hidden");
+        empty.querySelector("h2").textContent = "Inventory temporarily unavailable";
+        empty.querySelector("p").textContent = "Please refresh the page or call the store.";
+      }
+    }
+
+    q.addEventListener("input", applyFilters);
+    cat.addEventListener("change", applyFilters);
+    instock.addEventListener("change", applyFilters);
+
+    loadMore.addEventListener("click", () => {
+      renderLimit += 60;
+      render();
+    });
+
+    loadInventory();
+  </script>
+</body>
+</html>
